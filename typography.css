@@ -1,0 +1,318 @@
+/*   Typography & Colors
+*    (c) SublimeYe, 2011
+*    Skype: sublimeye
+--------------------------------*/
+body{font:12px/1.4 Arial,Helvetica,sans-serif}
+.sans{font-family:Arial,Helvetica,sans-serif}
+
+h1,h2,h3,h4,h5,h6{font-family:Georgia,"Times New Roman",Times,serif;font-weight:normal}
+p{line-height:21px}
+
+ul {list-style: none;}
+
+.main ul {
+	list-style: none;
+}
+
+.main-column-right {
+	margin-bottom: 20px;
+}
+
+.main-column-right ul li {
+	padding-left: 15px;
+	background: url('img/ico_ul_bullet.png') no-repeat left center;
+	margin-bottom: 1ex;
+}
+
+.main-column-right ul {
+	margin: 0 0 20px 12px;
+}
+
+.main-column-right ol {
+	margin-left: 24px;
+	margin-bottom: 20px;
+}
+
+.main-column-right ol li {
+	position: relative;
+	z-index: 10;
+	margin-bottom: 1ex;
+}
+
+.main-column-right ol li:before {
+	content: '';
+	position: absolute;
+	left: -22px;
+	top: -1px;
+	width: 17px;
+	height: 17px;
+	z-index: -1;
+	background: #f2f2f2;
+	background: -moz-linear-gradient(top, #f2f2f2 0%, #e8e8e8 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f2f2f2), color-stop(100%,#e8e8e8));
+	background: -webkit-linear-gradient(top, #f2f2f2 0%,#e8e8e8 100%);
+	background: -o-linear-gradient(top, #f2f2f2 0%,#e8e8e8 100%);
+	background: -ms-linear-gradient(top, #f2f2f2 0%,#e8e8e8 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f2f2', endColorstr='#e8e8e8',GradientType=0 );
+	background: linear-gradient(top, #f2f2f2 0%,#e8e8e8 100%);
+}
+
+.main p{line-height:21px;margin-bottom:1.8ex}
+
+strong{font-weight:bold}
+h1{font-size:20px;line-height:28px; margin: 20px 0 15px 0}
+h2{font-size:18px;line-height:24px; margin: 20px 0 10px 0}
+.main-column-right h2{color: #d97013}
+h3{font-size:16px; margin:  20px 0 15px 0}
+h4 {font-size: 14px; margin: 20px 0 10px 0}
+
+
+.ind-column-left h1 {margin-top: 0}
+.inset h3 {margin:  20px 0 3px 0; line-height: 1.2em}
+/*   Links
+--------------------------------*/
+a{color:#1a78b2;text-decoration:underline}
+.content a:visited{color: #5e518f}
+a:hover{color: #be4242; /*text-decoration:none;*/}
+
+/* GLOBAL
+--------------------------------*/
+.h-underline {
+	border-bottom: 1px dotted #000;
+	display: inline-block;
+	line-height: 2ex;
+}
+
+/* header
+--------------------------------*/
+.logo {
+	font: bold 27px Georgia, "Times New Roman", Times, serif;
+	color: #8CAFE0;
+}
+.phones {
+	color: #86bceb;
+}
+.phones i {
+	color: #fff;
+	font-style: normal;
+}
+.actions a {
+	color: #a0d4ff;
+	text-decoration: underline;
+}
+.actions a:hover {
+	text-decoration: none;
+}
+.search-bar input[type=submit] {
+	font-size: 14px;
+	font-weight: bold;
+	color: #908F90;
+}
+/* top navigation
+--------------------------------*/
+.main-nav a {
+	font: 14px Georgia,"Times New Roman",Times,serif;
+	text-shadow: 0 1px 1px #fff;
+	color: #414851;
+	text-decoration: none;
+}
+
+.main-nav .current > a {
+	color: #356c97;
+}
+
+.main-nav a:hover {
+	color: #be4242;
+}
+
+.main-nav .current > a:hover {
+	color: #356c97;
+}
+
+.sub-nav a {
+	font: 12px Arial,Helvetica,sans-serif;
+	text-decoration: underline;
+}
+
+.catalog {
+	font-size: 0;
+}
+
+.catalog .item-head, .catalog .item-foot, .catalog .item {
+	font-size: 0;
+}
+
+.item-title, .item-title a {
+	font-size: 14px;
+	font-family: Arial,Helvetica,sans-serif;
+	color: #1a78b2;
+	text-decoration: underline;
+	color: #1a78b2;
+}
+
+.catalog .item-size {
+	font-size: 11px;
+	color: #666;
+}
+
+.item-title:hover {
+	text-decoration: none;
+}
+
+.price, .item-price {
+	color: #1f2020;
+	font-size: 12px;
+}
+
+.price del, .item-price del {
+	color: #969696;
+	text-decoration: line-through;
+}
+
+.price ins, .item-price ins {
+	color: #ff8400;
+	text-decoration: none;
+}
+
+.comments-text {
+	display: inline-block;
+}
+
+.comments-text, .comments-text a {
+	color: #888888;
+	font-size: 11px;
+	text-decoration: none;
+}
+
+.comments-text a:hover {
+	text-decoration: underline;
+}
+
+/* blog
+--------------------------------*/
+.blog-container {
+	color: #ffffff;
+}
+.blog-container h2 {
+	font-size: 20px;
+	color: #ffffff;
+}
+
+.blog-container .h-underline {
+	border-bottom: 2px dotted #fff;
+}
+
+.post-title {
+	color: #a5defe;
+	font-size: 16px;
+}
+.post-message {
+	line-height: 1.7;
+}
+.post-details {
+	color: #33373d;
+	text-shadow: 0 1px 1px #A5AAB0;
+}
+.post-comments {
+	font-size: 11px;
+	text-shadow: none;
+	color: #C2C8CC;
+}
+
+.post-comments:hover {
+	text-decoration: none;
+	color: #C2C8CC;
+}
+
+/* text themes
+--------------------------------*/
+.si-title {}
+.si-desc {}
+
+.theme-dark .si-title {
+	background: #000;
+	color: #fff;
+}
+.theme-dark .si-desc {
+	background: #000;
+	color: #fff;
+}
+
+.theme-light .si-title {}
+.theme-light a {
+	color: #000;
+	text-decoration: none;
+}
+
+.theme-light a:hover {
+	text-decoration: underline;
+}
+
+/* breadcrumbs
+--------------------------------*/
+.breadcrumbs {
+	font-size: 11px;
+}
+.breadcrumbs a {
+	color: #888;
+}
+
+.breadcrumbs a:hover {
+	text-decoration: none;
+}
+
+.breadcrumbs .current {
+	color: #206499;
+}
+
+/* footer
+--------------------------------*/
+.footer {
+	color: #ffffff;
+	font-size: 11px;
+}
+.f-notice {
+	line-height: 1.4;
+}
+.footer a {
+	color: #6eaacc;
+}
+.policy {
+	color: #7f8790;
+}
+
+.footer .f-cloudy {
+	color: #fff;
+}
+
+/*	=product preview
+__________________________________*/
+.product-price {
+	font-size:24px;
+}
+
+.product-data h4 {
+	font: bold 14px Georgia, sans-serif;
+	color:#222;
+}
+
+.product-size-grid a {
+	border-bottom:1px dotted #1868a7;
+	text-decoration:none;
+}
+
+.product-size-grid a:hover {
+	border-bottom:0;
+}
+
+.product-chosen-options em {
+	font-weight:bold;
+}
+
+.region-name {
+	color:#6d6d6d;
+}
+
+.delivery-terms {
+	font-size:18px;
+}

@@ -1,0 +1,23 @@
+.sidebar .item {
+	display: inline-block;
+	width: 176px;
+}
+
+.catalog .item-foot {
+	margin-left: -176px;
+}
+
+input[type='submit'] {
+	padding: 0 5px;
+}
+
+.search-field {
+	margin-top: -1px;
+	width: 160px;
+	height: 20px;
+	line-height: 20px;
+}
+
+input[type='submit'] {
+	border: auto;
+}
