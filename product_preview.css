@@ -168,7 +168,7 @@ __________________________________*/
 	width:38px;
 	height:38px;
 	bottom:2px;
-	right:2px;
+	right:0;
 	cursor: url('zoomin.cur'), pointer;
 	*cursor: url(zoomin.cur);
 
