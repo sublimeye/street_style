@@ -8,7 +8,7 @@ var options = {
 };
 
 var thumbnails = {
-	max: 6,
+	max: 7,
 	pos: [],
 	index: 0,
 	container: '.ppreview-list',
@@ -58,6 +58,36 @@ function slidingContent( container ) {
 			});
 		}
 	}
+}
+
+function clickableHover(container, dropdown) {
+	var customClass = 'open';
+
+	$(container).bind('click', function(e) {
+		var target = $(e.currentTarget),
+				open = target.hasClass(customClass),
+				child = target.find(dropdown);
+
+		if (open) {
+			child.css('display', 'none');
+			target.removeClass(customClass);
+		} else {
+			child.css('display', 'block');
+			target.addClass(customClass);
+		}
+	});
+}
+
+function clickTrigger(selector) {
+	var customClass = 'current',
+			items = $(selector);
+
+	items.bind('click', function(e) {
+		console.log('click?');
+		items.removeClass(customClass);
+		$(e.currentTarget).addClass(customClass)
+	});
+
 }
 
 function activateVideoPopup( container ) {
@@ -191,7 +221,8 @@ function productImagesSlider(thumbs) {
 	var o = {
 		thumbElem: '.thumb-item',
 		imageContainer: '.product-image-container'
-	};
+	},
+	thumbElements = $(o.thumbElem);
 
 	thumbs = thumbs || thumbnails.max;
 
@@ -212,7 +243,8 @@ function productImagesSlider(thumbs) {
 
 			images.push( {
 				'path': img.src,
-				'pathBig': imgBigSrc
+				'pathBig': imgBigSrc,
+				'caption': $(elem).attr('data-caption')// небольшая доработка (обновляет комментарий под фото)
 			} );
 
 			$(elem).attr('rel', key);
@@ -230,6 +262,12 @@ function productImagesSlider(thumbs) {
 					.attr('href', images[id].pathBig)
 						.find('img')
 						.attr('src', imgsrc);
+			$('.preview-caption span').html(images[id].caption);// небольшая доработка (обновляет комментарий под фото)
+
+//			set as current
+			thumbLinks.removeClass('current');
+			$(this).addClass('current');
+
 			return false;
 		});
 
@@ -272,6 +310,12 @@ function thumbnailsNavigation(max) {
 
 }
 
+function triggerSubmitForm(elem, form) {
+	$(elem).bind('click', function() {
+		$(form).trigger('submit');
+	});
+}
+
 function productImageZoom() {
 	var imgContainer = $('.product-image-container a'),
 			productContainer = $('.product'),
@@ -280,8 +324,8 @@ function productImageZoom() {
 			img = $('img', imgContainer),
 			imgSize = {
 				'widthSmall': 300,
-				'widthBig': 660,
 				'heightSmall': 450,
+				'widthBig': 660,
 				'heightBig': 990
 			};
 
@@ -326,13 +370,16 @@ function productImageZoom() {
 }
 
 $(document).ready(function(){
-	$('.logo').length && $('.logo').gradientText({colors:["#a894e7","#6fd2d5"]})
+	$('.logo').length && $('.logo').gradientText({colors:["#a894e7","#6fd2d5"]});
 
 	mainSlider.init();
 	slidingContent('.product-size-grid');
 	slidingContent('.delivery-terms');
 	activateVideoPopup('.video');
 	productImagesSlider();
+	clickableHover('.pseudo-select', '.sselect-wrap');
+	clickTrigger('.product-size-list li');
+	triggerSubmitForm('.preview-selected-selectbox', '.filter-preview');
 
 	$('.select-colours').smartSelectbox({mode: 'colour'});
 	$('.select-size').smartSelectbox({mode: 'size'});

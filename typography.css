@@ -105,6 +105,7 @@ a:hover{color: #be4242; /*text-decoration:none;*/}
 }
 .search-bar input[type=submit] {
 	font-size: 14px;
+	padding-bottom: 2px;
 	font-weight: bold;
 	color: #908F90;
 }

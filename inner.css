@@ -36,7 +36,7 @@
 }
 
 .opt-size:hover .sselect-wrap, .opt-colours:hover .sselect-wrap {
-	display: block;
+	display: block !important;
 }
 
 /* breadcrumbs
@@ -334,13 +334,19 @@ __________________________________*/
 }
 
 .reset-selectbox {
-	float: right;
+	float: left;
 	background: none;
 	border: none;
 	display: block;
 	text-decoration: underline;
 	color: #235379;
 	cursor: pointer;
+}
+
+.preview-selected-selectbox {
+	float: right;
+	color: #940000;
+	font-size: 14px;
 }
 
 .reset-selectbox:hover {
