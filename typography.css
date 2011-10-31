@@ -20,7 +20,7 @@ ul {list-style: none;}
 
 .main-column-right ul li {
 	padding-left: 15px;
-	background: url('img/ico_ul_bullet.png') no-repeat left center;
+	background: url('/tpl/img/ico_ul_bullet.png') no-repeat left center;
 	margin-bottom: 1ex;
 }
 

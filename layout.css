@@ -155,7 +155,7 @@ input[type='submit']:active {
 	z-index: -1;
 	width: 92px;
 	height: 100px;
-	background: url("img/bg_sh_corner.png") no-repeat;
+	background: url("/tpl/img/bg_sh_corner.png") no-repeat;
 }
 
 .item-message {
@@ -171,7 +171,7 @@ input[type='submit']:active {
 	content: '';
 	width: 18px;
 	height: 18px;
-	background: url("img/icons.png") no-repeat -64px -49px;
+	background: url("/tpl/img/icons.png") no-repeat -64px -49px;
 }
 
 .item-message:after {
@@ -181,14 +181,14 @@ input[type='submit']:active {
 	content: '';
 	width: 18px;
 	height: 18px;
-	background: url("img/icons.png") no-repeat -82px -49px;
+	background: url("/tpl/img/icons.png") no-repeat -82px -49px;
 }
 
 /* icons
 --------------------------------*/
 .icon {
 	display: inline-block;
-	background: url('img/icons.png') no-repeat;
+	background: url('/tpl/img/icons.png') no-repeat;
 }
 
 .icon-social {
@@ -238,7 +238,7 @@ input[type='submit']:active {
 --------------------------------*/
 .btn {
 	display: inline-block;
-	background: url("img/btn.png") no-repeat;
+	background: url("/tpl/img/btn.png") no-repeat;
 }
 
 .btn:active {
@@ -329,7 +329,7 @@ input[type='submit']:active {
 .promo-slider {
 	padding-top: 24px;
 	height: 293px;
-	background: url("img/t_bg_promo-slider.png") repeat-x;
+	background: url("/tpl/img/t_bg_promo-slider.png") repeat-x;
 }
 
 .promo-slider .wrap {
@@ -359,9 +359,20 @@ input[type='submit']:active {
 	float: left;
 	width: 459px;
 	height: 231px;
-	padding: 0 9px 0 10px;
+	padding: 0 9px 0 9px;
 	list-style: none;
-	background: url("img/bg_slider_item.png") no-repeat;
+	background: url("/tpl/img/bg_slider_item.png") no-repeat;
+}
+
+.si-link {
+	display: block;
+	height: 224px;
+	width: 458px;
+	border: 1px solid #fff;
+}
+
+.si-link:hover {
+	border-color: #6A34F7;
 }
 
 .si-text {
@@ -385,8 +396,9 @@ input[type='submit']:active {
 
 .si-pic {
 	position: absolute;
-	width:460px;
-	height:226px;
+	width:458px;
+	height:224px;
+	top: 1px;
 	z-index:1;
 	overflow:hidden;
 }
@@ -401,7 +413,6 @@ input[type='submit']:active {
 }
 
 .si-mask img {
-	top:1px;
 	position: absolute;
 }
 
@@ -460,13 +471,13 @@ __________________________________*/
 
 	width: 62px;
 	height: 22px !important;
-	background: url("img/icons.png") -64px -80px;
+	background: url("/tpl/img/icons.png") -64px -80px;
 }
 
 .jspArrow {
 	position:relative;
 	top:-1px;
-	background: url('img/icons.png') 20px -233px;
+	background: url('/tpl/img/icons.png') 20px -233px;
 	text-indent:-20000px;
 	display:block;
 	cursor:pointer;
@@ -489,7 +500,7 @@ __________________________________*/
 	overflow: hidden;
 	clear: both;
 	min-width: 1000px;
-	background: url("img/t_bg_blog_container.png");
+	background: url("/tpl/img/t_bg_blog_container.png");
 }
 
 .blog-container .wrap {
@@ -501,7 +512,7 @@ __________________________________*/
 .blog-container:before {
 	width: 100%;
 	height:2px;
-	background: url("img/t_bg_top_blog_container.png") repeat-x center top;
+	background: url("/tpl/img/t_bg_top_blog_container.png") repeat-x center top;
 }
 
 .blog-post {
@@ -524,7 +535,7 @@ __________________________________*/
 	top: 2px;
 	width: 17px;
 	height: 19px;
-	background: url("img/icons.png") -64px -29px;
+	background: url("/tpl/img/icons.png") -64px -29px;
 }
 
 .blog-post:after {
@@ -532,7 +543,7 @@ __________________________________*/
 	bottom: 15px;
 	width: 17px;
 	height: 19px;
-	background: url("img/icons.png") -83px -29px;
+	background: url("/tpl/img/icons.png") -83px -29px;
 }
 
 /* catalog
@@ -627,7 +638,7 @@ __________________________________*/
 	right: -1px;
 	width: 63px;
 	height: 64px;
-	background: url("img/icons.png") no-repeat;
+	background: url("/tpl/img/icons.png") no-repeat;
 }
 
 .addon-new .addon-ico {
@@ -650,7 +661,7 @@ __________________________________*/
 .header {
 	min-width: 1000px;
 	height: 137px;
-	background: url('img/t_bg_header.png') repeat-x center top;
+	background: url('/tpl/img/t_bg_header.png') repeat-x center top;
 }
 
 .top-bar {
@@ -792,7 +803,7 @@ textarea {
 }
 
 .main-nav .current {
-	background: url("img/t_bg_nav_current.png");
+	background: url("/tpl/img/t_bg_nav_current.png");
 }
 
 .current .sub-nav {
@@ -823,7 +834,7 @@ textarea {
 	min-width: 1000px;
 	height: 141px;
 	padding-top: 40px;
-	background: url("img/t_bg_footer.png") repeat-x center top;
+	background: url("/tpl/img/t_bg_footer.png") repeat-x center top;
 }
 
 .footer .wrap {
@@ -851,7 +862,7 @@ textarea {
 	height: 35px;
 	padding-left: 13px;
 	line-height: 44px;
-	background: url("img/bg_cloudy.png") no-repeat;
+	background: url("/tpl/img/bg_cloudy.png") no-repeat;
 	
 }
 

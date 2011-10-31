@@ -64,7 +64,7 @@
 .breadcrumbs-nav a {
 	display: inline-block;
 	padding-right: 20px;
-	background: url('img/ico_breadcrumbs_arrow.png') no-repeat right center;
+	background: url('/tpl/img/ico_breadcrumbs_arrow.png') no-repeat right center;
 }
 
 /* sidebar
@@ -144,7 +144,7 @@ __________________________________*/
 	border-radius: 5px;
 
 	box-shadow: 1px 1px 5px #999 inset;
-	background: #ffffff url("img/ico_pseudo_select.png") no-repeat 233px 4px;
+	background: #ffffff url("/tpl/img/ico_pseudo_select.png") no-repeat 233px 4px;
 }
 
 .pseudo-select-title {
@@ -209,7 +209,7 @@ __________________________________*/
 	display: block;
 	width: 9px;
 	height: 15px;
-	background: url("img/icons.png") no-repeat -65px -101px;
+	background: url("/tpl/img/icons.png") no-repeat -65px -101px;
 }
 
 .next-page {
@@ -220,7 +220,7 @@ __________________________________*/
 	display: block;
 	width: 9px;
 	height: 15px;
-	background: url("img/icons.png") no-repeat -74px -101px;
+	background: url("/tpl/img/icons.png") no-repeat -74px -101px;
 }
 
 /* background gradient line
