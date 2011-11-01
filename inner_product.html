@@ -198,7 +198,7 @@
 									<div class="product-price price">
 										<ins>-10%</ins>
 										<del>500 руб.</del>
-										<br/> 4532 руб.
+										<div>4532 руб.</div>
 									</div>
 								</td>
 								<td>
@@ -237,7 +237,7 @@
 											<td>40</td>
 										</tr>
 										<tr>
-											<td>Каждый</td>
+											<td>Объем бедер, см</td>
 											<td>Охотник</td>
 											<td>Желает</td>
 											<td>Знать</td>
@@ -342,6 +342,19 @@
 				<!--item-desc-->
 			</div>
 			<!--user-comment-->
+			<div class="clearfix btn-leave-comment">
+			<button id="showform" class="btn-green btn-grad">Оставить отзыв</button>
+			</div>
+<form class="leave-comment-form" action="<?=$arResult['DETAIL_PAGE_URL'];?>?c=f" method="post" id="showedForm">
+	<p class="name">Имя*:<br /><input type="text" name="name" /></p>
+	<p class="city">Город:<br /><input type="text" name="sity" /></p>
+	<p class="message-text">Текст сообщения*:<br /><textarea cols="26" name="text"></textarea></p>
+	<p class="confirm-captcha">Картинка подтверждения*:<br />
+	<img src="/bitrix/tools/captcha.php?captcha_sid=<?=$code;?>" alt="CAPTCHA" /><br />
+	<input type="text" name="captcha_word" /></p>
+	<p><input type="submit" name="submit" value="Отправить" /></p>
+	<input type="hidden" name="captcha_sid" value="<?=$code;?>" />
+</form>
 
 			<div class="video-popup">
 				<div class="video-container">

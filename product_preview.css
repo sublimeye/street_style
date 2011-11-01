@@ -207,6 +207,7 @@ __________________________________*/
 	width:100%;
 	padding:5px 0;
 
+	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABBJREFUeNpiOHHixGaAAAMAB8ADDFRL3QAAAAAASUVORK5CYII=);
 	background:rgba(200,200,200,.7);
 	opacity:.6;
 
@@ -464,10 +465,13 @@ __________________________________*/
 	margin:15px 0 0;
 }
 .product-size-grid-container td {
-	padding:10px;
+	padding:5px 3px;
 	border:1px solid #ccc;
-	
 }
+.product-size-grid-container tr td:first-child {
+	width: 60px;
+}
+
 
 /*	=colours
 __________________________________*/

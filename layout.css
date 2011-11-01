@@ -90,7 +90,7 @@ input[type='submit'] {
 }
 
 .options input[type='submit'] {
-	padding: 0 35px;
+	padding: 0 25px;
 }
 
 input[type='submit']:hover {
@@ -114,6 +114,7 @@ input[type='submit']:active {
 	padding: 2px 20px 0 2px;
 	float: left;
 	width: 100%;
+	min-height: 100px;
 	margin-bottom: 28px;
 	box-sizing: border-box;
 }
@@ -320,6 +321,10 @@ input[type='submit']:active {
 	box-shadow: 2px 2px 2px #47AC67 inset;
 }
 
+.btn-leave-comment {
+	clear: both;
+	margin: 25px 0 10px;
+}
 
 /*   3. CONTENT
 --------------------------------*/

@@ -73,6 +73,7 @@ h4 {font-size: 14px; margin: 20px 0 10px 0}
 --------------------------------*/
 a{color:#1a78b2;text-decoration:underline}
 .content a:visited{color: #5e518f}
+.content a:visited:hover{color: #1a78b2}
 a:hover{color: #be4242; /*text-decoration:none;*/}
 
 /* GLOBAL
