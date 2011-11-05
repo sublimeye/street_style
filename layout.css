@@ -116,6 +116,7 @@ input[type='submit']:active {
 	width: 100%;
 	min-height: 100px;
 	margin-bottom: 28px;
+	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
 
@@ -415,6 +416,7 @@ input[type='submit']:active {
 .si-mask {
 	position: relative;
 	z-index:50;
+	display: block;
 }
 
 .si-mask img {
@@ -609,7 +611,7 @@ __________________________________*/
 	position: absolute;
 	bottom: 0;
 	left: 0;
-	width: 157px;
+	width: 158px;
 	padding: 2px 5px;
 	background: #EEEEEE;
 	background: rgba(238,238,238,.75);
