@@ -13,6 +13,9 @@ var thumbnails = {
 	index: 0,
 	container: '.ppreview-list',
 	active: 0,
+	images: [],
+	waiting: false,
+	obs: $({}),
 
 	init: function() {
 		this.container = $(this.container);
@@ -84,7 +87,6 @@ function clickTrigger(selector) {
 			items = $(selector);
 
 	items.bind('click', function(e) {
-		console.log('click?');
 		items.removeClass(customClass);
 		$(e.currentTarget).addClass(customClass)
 	});
@@ -223,56 +225,111 @@ function productImagesSlider(thumbs) {
 		thumbElem: '.thumb-item',
 		imageContainer: '.product-image-container'
 	},
-	thumbElements = $(o.thumbElem);
+		trobber = $('<div class="product-preview-loader"></div>');
+
+	$('.product-image-container').append(trobber);
+	var trobberImage = new Image();
+	trobberImage.src = '/tpl/img/loader.gif';
+	/**
+	 * Cache images
+	 * @param id
+	 * @param src
+	 * @param mod
+	 */
+	var cacheImage = function(id, src, mod) {
+		var img;
+
+		img = new Image();
+		img.src = src;
+
+		$(img).bind('load', function() {
+			thumbnails.images[id]['loaded_' + mod] = true;
+			thumbnails.obs.trigger('img.loaded', [id, mod]);
+		});
+
+		return img;
+	};
+
+	/**
+	 * Show Image
+	 * @param id
+	 */
+	var showImage = function(id) {
+		var img;
+
+		if (id != thumbnails.active) {
+			thumbnails.active = id;
+			img = options.zoomed ? images[id].iBig : images[id].iMed;
+
+			$(o.imageContainer)
+					.find('a')
+					.attr('rel', images[id].iMedSrc)
+					.attr('href', images[id].iBigSrc)
+					.html(img);
+
+			$('.preview-caption span').html(images[id].caption);// небольшая доработка (обновляет комментарий под фото)
+
+	//			set as current
+			thumbLinks.removeClass('current');
+			$(this).addClass('current');
+		}
+	};
+
 
 	thumbs = thumbs || thumbnails.max;
 
 	if ($(o.thumbElem).length) {
 		thumbnailsNavigation(thumbs);
 
-		var images = [];
+		var images = thumbnails.images;
 		var thumbLinks = $(o.thumbElem).find('a');
 		thumbLinks.eq(thumbnails.active).addClass('current');
 
 		thumbLinks.each(function(key, elem) {
-			var img, imgBigSrc;
+			var img, bigImg,
+					$elem = $(elem);
 
 		/* precache items */
-			img = new Image();
-			img.src = $(elem).attr('href');
-
-			imgBigSrc = $(elem).attr('data-img');
+			img = cacheImage(key, $elem.attr('href'), 'med');
+			bigImg = cacheImage(key, $elem.attr('data-img'), 'big');
 
 			images.push( {
-				'path': img.src,
-				'pathBig': imgBigSrc,
-				'caption': $(elem).attr('data-caption')// небольшая доработка (обновляет комментарий под фото)
+				"id": key,
+				"iMed": img,
+				"iBig": bigImg,
+				"iMedSrc": img.src,
+				"iBigSrc": bigImg.src,
+				"caption": $elem.attr('data-caption')// небольшая доработка (обновляет комментарий под фото)
 			} );
 
-			$(elem).attr('rel', key);
+			$elem.attr('rel', key);
 		});
 
-		thumbLinks.bind('click', function() {
-			var id = $(this).attr('rel'),
-					imgsrc = '';
-
-			if (id != thumbnails.active) {
-				thumbnails.active = id;
-				imgsrc = options.zoomed ? images[id].pathBig : images[id].path;
-				console.log(imgsrc);
-				$(o.imageContainer)
-						.find('a')
-						.attr('rel', images[id].path)
-						.attr('href', images[id].pathBig)
-							.find('img')
-							.attr('src', imgsrc);
-				$('.preview-caption span').html(images[id].caption);// небольшая доработка (обновляет комментарий под фото)
-
-	//			set as current
-				thumbLinks.removeClass('current');
-				$(this).addClass('current');
+		thumbnails.obs.bind('img.loaded', function(e, id, mod) {
+			if ((thumbnails.waiting.id == id) && (thumbnails.waiting.mod == mod)) {
+				trobber.hide();
+				thumbnails.waiting.cb && thumbnails.waiting.cb();
+				thumbnails.waiting.id = false;
 			}
 
+		});
+
+		thumbLinks.bind('click.preview_image', function() {
+			var id = $(this).attr('rel'),
+					mod = options.zoomed ? 'big' : 'med';
+
+			if (thumbnails.images[id]['loaded_' + mod]) {
+				showImage(id);
+			} else {
+				trobber.show();
+				thumbnails.waiting = {
+					id: +id,
+					mod: mod,
+					cb: function() {
+						showImage(id)
+					}
+				};
+			}
 			return false;
 		});
 
@@ -326,39 +383,60 @@ function productImageZoom() {
 			productContainer = $('.product'),
 			detailsContainer = '.product-details',
 			zoomIco = '.ico-zoom',
-			img = $('img', imgContainer),
 			imgSize = {
 				'widthSmall': 300,
 				'heightSmall': 450,
 				'widthBig': 660,
 				'heightBig': 990
-			};
+			},
+			trobber = $('.product-preview-loader');
 
-	var toggleZoom = function(target) {
-		if (!options.zoomed) {
-			options.zoomed = true;
+	var showImageZoom = function(id, mod) {
+		var iKey = (mod == 'med') ? 'iMed' : 'iBig';
 
-			img.attr('src', target.href);
-			productContainer.addClass('zoomed');
-			img.stop(true, true).animate({
-				'width': imgSize.widthBig,
-				'height': imgSize.heightBig
-			}, function() {
-				$(detailsContainer).stop(true, true).slideUp(100);
-			});
-
-
+		if (thumbnails.images[id]['loaded_' + mod]) {
+			imgContainer.html($(thumbnails.images[id][iKey]));
 		} else {
-			options.zoomed = false;
+			trobber.show();
+			thumbnails.waiting = {
+				id: +id,
+				mod: mod,
+				cb: function() {
+					imgContainer.html($(thumbnails.images[id][iKey]));
+				}
+			}
+		}
+	};
 
+	var toggleZoom = function() {
+		var img = $('img', imgContainer);
+
+		if (options.zoomed) {
+			//unzoom image
+			options.zoomed = false;
 			productContainer.removeClass('zoomed');
-			img.stop(true, true).animate({
+
+			$(detailsContainer).stop(true, true).slideDown(100);
+
+			imgContainer.stop(true, false).animate({
 				'width': imgSize.widthSmall,
 				'height': imgSize.heightSmall
 			}, function() {
-				img.attr('src', target.rel);
+				showImageZoom(parseInt(thumbnails.active,10), 'med');
 			});
-			$(detailsContainer).stop(true, true).slideDown(100);
+
+		} else {
+			//zoom image
+			options.zoomed = true;
+			productContainer.addClass('zoomed');
+
+			imgContainer.stop(true, false).animate({
+				'width': imgSize.widthBig,
+				'height': imgSize.heightBig
+			}, function() {
+				showImageZoom(parseInt(thumbnails.active,10), 'big');
+				$(detailsContainer).stop(true, true).slideUp(100);
+			});
 
 		}
 	};

@@ -395,5 +395,17 @@ __________________________________*/
 	width: 168px;
 }
 
-
-
+/*	=trobber/loader
+__________________________________*/
+.product-preview-loader {
+	display: none;
+	position: absolute;
+	width: 32px;
+	height: 32px;
+	left: 10%;
+	top: 7%;
+	margin-left: -16px;
+	margin-top: -16px;
+	z-index: 500;
+	background: url('/tpl/img/loader.gif');
+}

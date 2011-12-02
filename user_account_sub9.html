@@ -1,0 +1,281 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="Description" content="" />
+	<title>StreetStyle</title>
+	<link href='layout.css' rel="stylesheet" type="text/css" />
+	<link href='inner.css' rel="stylesheet" type="text/css" />
+	<link href='typography.css' rel="stylesheet" type="text/css" />
+	<link href='addon.css' rel="stylesheet" type="text/css" />
+
+	<link href='user.css' rel="stylesheet" type="text/css" />
+
+	<!--[if IE]><link rel="stylesheet" type="text/css" href='ie.css' /><![endif]-->
+	<!--[if IE 7]><link rel="stylesheet" type="text/css" href='ie7.css' /><![endif]-->
+	<link rel="Shortcut Icon" type="image/x-icon" href="" />
+
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/common.js"></script>
+</head>
+<body>
+
+<div class="header">
+	<div class="wrap">
+		<div class="top-bar">
+			<div class="logo">Streetstyle-shop.ru</div>
+			<div class="actions">
+				<div class="cart"><i class="icon ico-cart"></i><a href="#">Корзина</a></div>
+				<i class="splitter"></i>
+				<div class="login"><i class="icon ico-login"></i><a href="#">Войти на сайт</a></div>
+			</div>
+			<div class="phones"><i class="icon ico-phones"></i><i>тел. / факс:</i> + 7 <i>(495)</i> 123-45-67</div>
+		</div><!--top bar-->
+
+		<div class="nav-container">
+			<div class="tools">
+				<div class="search-bar">
+					<form action="">
+						<fieldset>
+							<i class="icon ico-search"></i>
+							<input class="search-field" type="text" placeholder="Модная рубашка)" tabindex="1" />
+							<input type="submit" value="Найти" />
+						</fieldset>
+					</form>
+					<a class="btn btn-help" href="#"></a>
+				</div>
+			</div>
+
+			<ul class="main-nav">
+				<li><a href="#">Для женщин</a></li>
+				<li class="current"><a href="#">Для мужчин</a>
+					<ul class="sub-nav">
+						<li><a href="#">Верхняя одежда</a></li>
+						<li><a href="#">Платья</a></li>
+						<li><a href="#">Головные уборы</a></li>
+						<li><a href="#">Юбки</a></li>
+						<li><a href="#">Брюки</a></li>
+					</ul>
+				</li>
+				<li><a href="#">Для животных</a>
+					<ul class="sub-nav">
+						<li><a href="#">Аксессуары</a></li>
+						<li><a href="#">Домики</a></li>
+						<li><a href="#">Кормушки</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<div class="main">
+	<div class="content wrap">
+
+		<div class="breadcrumbs">
+			<ul class="breadcrumbs-nav">
+				<li><a href="#">Главная</a></li>
+				<li><a href="#">Одежда</a></li>
+				<li><a href="#">Осень</a></li>
+				<li><span class="current">Куртки</span></li>
+			</ul>
+		</div>
+
+		<div class="main-column-right">
+			<h1>Личный кабинет: данные покупателя</h1>
+
+			<form action="" class="user-details-form">
+				<table class="user-details-grid">
+					<colgroup>
+						<col width="16.66%" />
+						<col width="16.66%" />
+						<col width="16.66%" />
+						<col width="16.66%" />
+						<col width="16.66%" />
+						<col width="16.66%" />
+					</colgroup>
+					<tr>
+						<td colspan="2">
+							<label for="sname">Фамилия</label>
+							<input id="sname" type="text" tabindex="2"/>
+						</td>
+						<td colspan="2">
+							<label for="fname">Имя</label>
+							<input id="fname" type="text" tabindex="3"/>
+						</td>
+						<td colspan="2">
+							<label for="tname">Отчество</label>
+							<input id="tname" type="text" tabindex="4"/>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2">
+							<label for="phone1">Телефон:</label>
+							<input id="phone1" type="text" tabindex="5"/>
+						</td>
+						<td colspan="2">
+							<div class="relative">
+								<label for="phone2">&nbsp;</label>
+								<div><input id="phone2" type="text" tabindex="6"/><a class="btn-pseudo btn-pseudo-plus" href="#">+</a></div>
+							</div>
+						</td>
+						<td colspan="2"></td>
+					</tr>
+					<tr>
+						<td colspan="3">
+							<label for="country">Страна</label>
+							<select name="" id="country" size="7" tabindex="7">
+								<option value="a">Австралия</option>
+								<option value="a">Австрия</option>
+								<option value="a">Азербайджан</option>
+								<option value="a">Азорские острова</option>
+								<option value="a">Аландские острова</option>
+								<option value="a">Албания</option>
+								<option value="a">Алжир</option>
+
+								<option value="a">Австралия</option>
+								<option value="a">Австрия</option>
+								<option value="a">Азербайджан</option>
+								<option value="a">Азорские острова</option>
+								<option value="a">Аландские острова</option>
+							</select>
+						</td>
+						<td colspan="3">
+							<label for="city">Город</label>
+							<select name="" id="city" size="7" tabindex="8">
+								<option value="a">Австралия</option>
+								<option value="a">Австрия</option>
+								<option value="a">Азербайджан</option>
+								<option value="a">Азорские острова</option>
+								<option value="a">Аландские острова</option>
+								<option value="a">Албания</option>
+								<option value="a">Алжир</option>
+
+								<option value="a">Австралия</option>
+								<option value="a">Австрия</option>
+								<option value="a">Азербайджан</option>
+								<option value="a">Азорские острова</option>
+								<option value="a">Аландские острова</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<label for="postcode">Индекс</label>
+							<input id="postcode" type="text" tabindex="9"/>
+						</td>
+						<td colspan="2">
+							<label for="street">Улица</label>
+							<input id="street" type="text" tabindex="10"/>
+						</td>
+						<td>
+							<label for="house">Дом</label>
+							<input id="house" type="text" tabindex="11"/>
+						</td>
+						<td>
+							<label for="hgroup">Корпус</label>
+							<input id="hgroup" type="text" tabindex="12"/>
+						</td>
+						<td>
+							<label for="appartment">Квартира</label>
+							<input id="appartment" type="text" tabindex="13"/>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="3">
+							<label for="email">Электронная почта:</label>
+							<input id="email" type="text"  tabindex="14"/>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2">
+							<a class="change-password lnk-dashed" href="#">Изменить</a><label for="password">Пароль</label>
+							<input id="password" type="password" tabindex="15" />
+						</td>
+						<td colspan="2">
+							<label for="password_new">Новый пароль</label>
+							<input id="password_new" type="password" tabindex="16"/>
+						</td>
+						<td colspan="2">
+							<label for="password_confirm">Подтверждение</label>
+							<input id="password_confirm" type="password" tabindex="17"/>
+						</td>
+					</tr>
+				</table>
+				<div>
+					<label class="btn-container">
+						<button class="btn-orange btn-grad btn-big" tabindex="18">Сохранить изменения</button>
+					</label>
+				</div>
+			</form>
+		</div><!--main column left-->
+
+		<div class="sidebar">
+			<h2 class="clearfix"><span class="h-underline">Верхняя одежда</span>:</h2>
+			<ul class="cat">
+				<li><a href="#">Аксессуары</a></li>
+				<li><a href="#">Бестселлеры</a></li>
+				<li><a href="#">Пиджаки</a></li>
+				<li class="current">
+					<a>Зимняя одежда</a>
+					<ul class="sub-cat">
+						<li><a href="#">Одежда на синтипоне</a></li>
+						<li><a href="#">Плащи</a></li>
+						<li class="current"><a>Куртки теплые</a></li>
+						<li><a href="#">Анараки</a></li>
+					</ul>
+				</li>
+				<li><a href="#">Верхняя одежда</a></li>
+				<li><a href="#">Платья</a></li>
+			</ul>
+
+			<h2 class="clearfix"><span class="h-underline">Бренды</span>:</h2>
+			<ul class="cat">
+				<li><a href="#">Angel Beslow</a></li>
+				<li><a href="#">Deify</a></li>
+				<li><a href="#">Kuckuk</a></li>
+				<li><a href="#">Sodisally</a></li>
+				<li><a href="#">BigRope</a></li>
+			</ul>
+
+			<h2 class="clearfix"><span class="h-underline">Акция недели</span>:</h2>
+
+			<div class="catalog">
+				<span class="item addon-offer">
+					<span class="item-head"><span class="item-pic"><a href="lnk"><img src="img/catalog_img1.jpg" height="237" alt="товар" /></a><span class="item-size">На модели 38 размер</span></span><i class="addon-ico"></i><a class="item-title" href="#">Название товара</a></span>
+					<span class="item-foot sh-corner"><span class="item-price"><del>5600</del> 2499 руб.</span><span class="comments-text"><i class="comments-ico">*</i> <a href="#">отзывы [ 22 ]</a></span></span>
+				</span>
+			</div>
+		</div>
+
+	</div><!--wrap-->
+</div><!--main-->
+
+<div class="footer">
+	<div class="wrap">
+		<div class="left-column">
+			<p class="f-notice clearfix">
+				<a href="http://street-style.ru">Street-style.ru</a> был основана в 2011 году с целью стать лучшим интернет-магазином.<br/> С тех пор мы стали больше, чем просто интернет-магазин обуви. <br/> Наша непоколебимая сосредоточиться на высшее качество обслуживания клиентов позволили нам расширить нашу онлайн предложения включить сумки, одежду<br/> и многое другое!
+			</p>
+
+			<p>
+				<a href="#">Доставка</a> &nbsp;&nbsp; | &nbsp;&nbsp; <a href="#">Возврат</a> &nbsp;&nbsp; <a class="f-cloudy" href="#">Партнерская программа</a>
+			</p>
+		</div>
+
+		<div class="right-column">
+			<p class="copyright">Copyright &copy; 2011 Street-style.ru. Все права защищены</p>
+			<p class="policy">Копирования всех состовляющих частей сайта в какой бы то ни было форме без разрешения владельца авторских прав запрещено.</p>
+
+			<div class="social-container">
+				<a class="icon icon-social ico-twitter" href="#" title="Twitter"></a>
+				<a class="icon icon-social ico-rss" href="#" title="RSS"></a>
+				<a class="icon icon-social ico-fb" href="#" title="Facebook"></a>
+				<a class="icon icon-social ico-vk" href="#" title="VKontakte"></a>
+				<a class="icon icon-social ico-myspace" href="#" title="MySpace"></a>
+			</div>
+		</div>
+	</div></div>
+<!--//layout-->
+</body>
+</html>

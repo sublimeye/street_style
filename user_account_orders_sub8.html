@@ -1,0 +1,390 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="Description" content="" />
+	<title>StreetStyle</title>
+	<link href='layout.css' rel="stylesheet" type="text/css" />
+	<link href='inner.css' rel="stylesheet" type="text/css" />
+	<link href='typography.css' rel="stylesheet" type="text/css" />
+	<link href='addon.css' rel="stylesheet" type="text/css" />
+
+	<link href='user.css' rel="stylesheet" type="text/css" />
+
+	<!--[if IE]><link rel="stylesheet" type="text/css" href='ie.css' /><![endif]-->
+	<!--[if IE 7]><link rel="stylesheet" type="text/css" href='ie7.css' /><![endif]-->
+	<link rel="Shortcut Icon" type="image/x-icon" href="" />
+
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/common.js"></script>
+</head>
+<body>
+
+<div class="header">
+	<div class="wrap">
+		<div class="top-bar">
+			<div class="logo">Streetstyle-shop.ru</div>
+			<div class="actions">
+				<div class="cart"><i class="icon ico-cart"></i><a href="#">Корзина</a></div>
+				<i class="splitter"></i>
+				<div class="login"><i class="icon ico-login"></i><a href="#">Войти на сайт</a></div>
+			</div>
+			<div class="phones"><i class="icon ico-phones"></i><i>тел. / факс:</i> + 7 <i>(495)</i> 123-45-67</div>
+		</div><!--top bar-->
+
+		<div class="nav-container">
+			<div class="tools">
+				<div class="search-bar">
+					<form action="">
+						<fieldset>
+							<i class="icon ico-search"></i>
+							<input class="search-field" type="text" placeholder="Модная рубашка)" tabindex="1" />
+							<input type="submit" value="Найти" />
+						</fieldset>
+					</form>
+					<a class="btn btn-help" href="#"></a>
+				</div>
+			</div>
+
+			<ul class="main-nav">
+				<li><a href="#">Для женщин</a></li>
+				<li class="current"><a href="#">Для мужчин</a>
+					<ul class="sub-nav">
+						<li><a href="#">Верхняя одежда</a></li>
+						<li><a href="#">Платья</a></li>
+						<li><a href="#">Головные уборы</a></li>
+						<li><a href="#">Юбки</a></li>
+						<li><a href="#">Брюки</a></li>
+					</ul>
+				</li>
+				<li><a href="#">Для животных</a>
+					<ul class="sub-nav">
+						<li><a href="#">Аксессуары</a></li>
+						<li><a href="#">Домики</a></li>
+						<li><a href="#">Кормушки</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<div class="main">
+	<div class="content wrap">
+
+		<div class="breadcrumbs">
+			<ul class="breadcrumbs-nav">
+				<li><a href="#">Главная</a></li>
+				<li><a href="#">Одежда</a></li>
+				<li><a href="#">Осень</a></li>
+				<li><span class="current">Куртки</span></li>
+			</ul>
+		</div>
+
+		<div class="main-column-right">
+			<h1>Личный кабинет: заказы</h1>
+
+			<!-- USER ORDER -->
+			<div class="user-order-container j-expanded">
+				<div class="user-order-heading">
+					<a class="toggler lnk-dashed" href="#">Свернуть</a>
+					<span class="order-date">21 ноября 2011 года</span>
+					<span class="order-summary">
+						<span class="em-orange">3 товара</span> на общую сумму <span class="em-orange">7 000 рублей (с доставкой)</span>
+					</span>
+				</div>
+				<div class="user-order-content">
+					<ul class="user-order-status">
+						<li class="status-blue">Оплачен<br/> 21 ноября 2011 года</li>
+						<li class="status-green">Комплектация начата<br/> 21 ноября 2011 года</li>
+						<li class="status-grey">Заказ будет отправлен<br/>28 ноября 2011 года (ориентировочно)</li>
+					</ul>
+
+					<table class="user-grid">
+						<colgroup>
+							<col />
+							<col width="80" />
+							<col width="60" />
+							<col width="100" />
+							<col width="120" />
+						</colgroup>
+						<tr class="user-grid-heading">
+							<td>Товары</td>
+							<td>Размер</td>
+							<td>Цвет</td>
+							<td class="txt-right">Количество</td>
+							<td>Стоимость</td>
+						</tr>
+						<tr>
+							<td>Куртка фбалвл ллыо "Колиоиев"</td>
+							<td>M</td>
+							<td><img src="img/opt_colour_1.png" alt=""/></td>
+							<td class="txt-right">2</td>
+							<td class="txt-right price">3561 руб.</td>
+						</tr>
+						<tr>
+							<td>Жакет фбалвл "Колиоиев"</td>
+							<td>L</td>
+							<td><img src="img/opt_colour_2.png" alt=""/></td>
+							<td class="txt-right">1</td>
+							<td class="txt-right price">2561 руб.</td>
+						</tr>
+						<tr>
+							<td colspan="4">Купон на скидку 23%</td>
+							<td class="txt-right price">-200 руб.</td>
+						</tr>
+
+						<tr class="user-grid-heading">
+							<td colspan="4">Оплата и доставка</td>
+							<td colspan="4">Стоимость</td>
+						</tr>
+						<tr>
+							<td colspan="4">Наложенный платеж , Почта</td>
+							<td class="txt-right price" colspan="4">300 руб.</td>
+						</tr>
+
+						<tr class="info-row txt-right">
+							<td colspan="5">
+								<div class="info-row-border txt-right">Общий итог: <span class="em-green">23300 руб.</span></div>
+							</td>
+						</tr>
+					</table>
+
+					<div class="btn-container order-actions">
+						<button class="btn-grey">Редактировать заказ</button>
+						<button class="btn-grey">Отменить заказ</button>
+					</div>
+
+				</div><!--//order content-->
+			</div><!--//order-container-->
+
+<!-- USER ORDER  -->
+			<div class="user-order-container j-expanded">
+				<div class="user-order-heading">
+					<a class="toggler lnk-dashed" href="#">Свернуть</a>
+					<span class="order-date">21 ноября 2011 года</span>
+					<span class="order-summary">
+						<span class="em-orange">3 товара</span> на общую сумму <span class="em-orange">7 000 рублей (с доставкой)</span>
+					</span>
+				</div>
+				<div class="user-order-content">
+					<ul class="user-order-status">
+						<li class="status-blue">Оплачен<br/> 21 ноября 2011 года</li>
+						<li class="status-blue">Комплектация завершена<br/> 21 ноября 2011 года</li>
+						<li class="status-green">Заказ будет отправлен<br/>28 ноября 2011 года</li>
+					</ul>
+
+					<div class="order-number-notify">
+						Номер отправления: 5268965985. <a class="external" target="_blank" href="#">Следите за ходом доставки</a>
+					</div>
+
+					<table class="user-grid">
+						<colgroup>
+							<col />
+							<col width="80" />
+							<col width="60" />
+							<col width="100" />
+							<col width="120" />
+						</colgroup>
+						<tr class="user-grid-heading">
+							<td>Товары</td>
+							<td>Размер</td>
+							<td>Цвет</td>
+							<td class="txt-right">Количество</td>
+							<td>Стоимость</td>
+						</tr>
+						<tr>
+							<td>Куртка фбалвл ллыо "Колиоиев"</td>
+							<td>M</td>
+							<td><img src="img/opt_colour_1.png" alt=""/></td>
+							<td class="txt-right">2</td>
+							<td class="txt-right price">3561 руб.</td>
+						</tr>
+						<tr>
+							<td>Жакет фбалвл "Колиоиев"</td>
+							<td>L</td>
+							<td><img src="img/opt_colour_2.png" alt=""/></td>
+							<td class="txt-right">1</td>
+							<td class="txt-right price">2561 руб.</td>
+						</tr>
+						<tr>
+							<td colspan="4">Купон на скидку 23%</td>
+							<td class="txt-right price">-200 руб.</td>
+						</tr>
+
+						<tr class="user-grid-heading">
+							<td colspan="4">Оплата и доставка</td>
+							<td colspan="4">Стоимость</td>
+						</tr>
+						<tr>
+							<td colspan="4">Наложенный платеж , Почта</td>
+							<td class="txt-right price" colspan="4">300 руб.</td>
+						</tr>
+
+						<tr class="info-row info-row-total txt-right">
+							<td colspan="5">
+								<div class="info-row-border txt-right">Общий итог: <span class="em-green">23300 руб.</span></div>
+							</td>
+						</tr>
+					</table>
+
+					<div class="btn-container order-actions">
+						<button class="btn-grey">Редактировать заказ</button>
+						<button class="btn-grey">Отменить заказ</button>
+					</div>
+
+				</div><!--//order content-->
+			</div><!--//order-container-->
+
+
+			<div class="user-order-container j-folded">
+				<div class="user-order-heading">
+					<a class="toggler lnk-dashed" href="#">Развернуть</a>
+					<span class="order-date">21 ноября 2011 года</span>
+					<span class="order-summary">
+						<span class="em-orange">3 товара</span> на общую сумму <span class="em-orange">7 000 рублей (с доставкой)</span>
+					</span>
+				</div>
+				<div class="user-order-content">
+					<ul class="user-order-status">
+						<li class="status-blue">Оплачен<br/> 21 ноября 2011 года</li>
+						<li class="status-blue">Комплектация завершена<br/> 21 ноября 2011 года</li>
+						<li class="status-green">Заказ будет отправлен<br/>28 ноября 2011 года</li>
+					</ul>
+
+					<div class="order-number-notify">
+						Номер отправления: 5268965985. <a class="external" target="_blank" href="#">Следите за ходом доставки</a>
+					</div>
+
+					<table class="user-grid">
+						<colgroup>
+							<col />
+							<col width="80" />
+							<col width="60" />
+							<col width="100" />
+							<col width="120" />
+						</colgroup>
+						<tr class="user-grid-heading">
+							<td>Товары</td>
+							<td>Размер</td>
+							<td>Цвет</td>
+							<td class="txt-right">Количество</td>
+							<td>Стоимость</td>
+						</tr>
+						<tr>
+							<td>Куртка фбалвл ллыо "Колиоиев"</td>
+							<td>M</td>
+							<td><img src="img/opt_colour_1.png" alt=""/></td>
+							<td class="txt-right">2</td>
+							<td class="txt-right price">3561 руб.</td>
+						</tr>
+						<tr>
+							<td>Жакет фбалвл "Колиоиев"</td>
+							<td>L</td>
+							<td><img src="img/opt_colour_2.png" alt=""/></td>
+							<td class="txt-right">1</td>
+							<td class="txt-right price">2561 руб.</td>
+						</tr>
+						<tr>
+							<td colspan="4">Купон на скидку 23%</td>
+							<td class="txt-right price">-200 руб.</td>
+						</tr>
+
+						<tr class="user-grid-heading">
+							<td colspan="4">Оплата и доставка</td>
+							<td colspan="4">Стоимость</td>
+						</tr>
+						<tr>
+							<td colspan="4">Наложенный платеж , Почта</td>
+							<td class="txt-right price" colspan="4">300 руб.</td>
+						</tr>
+
+						<tr class="info-row txt-right">
+							<td colspan="5">
+								<div class="info-row-border txt-right">Общий итог: <span class="em-green">23300 руб.</span></div>
+							</td>
+						</tr>
+					</table>
+
+					<div class="btn-container order-actions">
+						<button class="btn-grey">Редактировать заказ</button>
+						<button class="btn-grey">Отменить заказ</button>
+					</div>
+				</div><!--//order content-->
+			</div><!--//order-container-->
+
+			<div class="orders-pagination">
+				Страницы: <span>1</span><a href="#">2</a><a href="#">&hellip;</a><a href="#">15</a>
+			</div>
+
+		</div><!--main column left-->
+
+		<div class="sidebar">
+			<h2 class="clearfix"><span class="h-underline">Верхняя одежда</span>:</h2>
+			<ul class="cat">
+				<li><a href="#">Аксессуары</a></li>
+				<li><a href="#">Бестселлеры</a></li>
+				<li><a href="#">Пиджаки</a></li>
+				<li class="current">
+					<a>Зимняя одежда</a>
+					<ul class="sub-cat">
+						<li><a href="#">Одежда на синтипоне</a></li>
+						<li><a href="#">Плащи</a></li>
+						<li class="current"><a>Куртки теплые</a></li>
+						<li><a href="#">Анараки</a></li>
+					</ul>
+				</li>
+				<li><a href="#">Верхняя одежда</a></li>
+				<li><a href="#">Платья</a></li>
+			</ul>
+
+			<h2 class="clearfix"><span class="h-underline">Бренды</span>:</h2>
+			<ul class="cat">
+				<li><a href="#">Angel Beslow</a></li>
+				<li><a href="#">Deify</a></li>
+				<li><a href="#">Kuckuk</a></li>
+				<li><a href="#">Sodisally</a></li>
+				<li><a href="#">BigRope</a></li>
+			</ul>
+
+			<h2 class="clearfix"><span class="h-underline">Акция недели</span>:</h2>
+
+			<div class="catalog">
+				<span class="item addon-offer">
+					<span class="item-head"><span class="item-pic"><a href="lnk"><img src="img/catalog_img1.jpg" height="237" alt="товар" /></a><span class="item-size">На модели 38 размер</span></span><i class="addon-ico"></i><a class="item-title" href="#">Название товара</a></span>
+					<span class="item-foot sh-corner"><span class="item-price"><del>5600</del> 2499 руб.</span><span class="comments-text"><i class="comments-ico">*</i> <a href="#">отзывы [ 22 ]</a></span></span>
+				</span>
+			</div>
+		</div>
+
+	</div><!--wrap-->
+</div><!--main-->
+
+<div class="footer">
+	<div class="wrap">
+		<div class="left-column">
+			<p class="f-notice clearfix">
+				<a href="http://street-style.ru">Street-style.ru</a> был основана в 2011 году с целью стать лучшим интернет-магазином.<br/> С тех пор мы стали больше, чем просто интернет-магазин обуви. <br/> Наша непоколебимая сосредоточиться на высшее качество обслуживания клиентов позволили нам расширить нашу онлайн предложения включить сумки, одежду<br/> и многое другое!
+			</p>
+
+			<p>
+				<a href="#">Доставка</a> &nbsp;&nbsp; | &nbsp;&nbsp; <a href="#">Возврат</a> &nbsp;&nbsp; <a class="f-cloudy" href="#">Партнерская программа</a>
+			</p>
+		</div>
+
+		<div class="right-column">
+			<p class="copyright">Copyright &copy; 2011 Street-style.ru. Все права защищены</p>
+			<p class="policy">Копирования всех состовляющих частей сайта в какой бы то ни было форме без разрешения владельца авторских прав запрещено.</p>
+
+			<div class="social-container">
+				<a class="icon icon-social ico-twitter" href="#" title="Twitter"></a>
+				<a class="icon icon-social ico-rss" href="#" title="RSS"></a>
+				<a class="icon icon-social ico-fb" href="#" title="Facebook"></a>
+				<a class="icon icon-social ico-vk" href="#" title="VKontakte"></a>
+				<a class="icon icon-social ico-myspace" href="#" title="MySpace"></a>
+			</div>
+		</div>
+	</div></div>
+<!--//layout-->
+</body>
+</html>

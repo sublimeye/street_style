@@ -1,0 +1,411 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="Description" content="" />
+	<title>StreetStyle</title>
+	<link href='layout.css' rel="stylesheet" type="text/css" />
+	<link href='inner.css' rel="stylesheet" type="text/css" />
+	<link href='typography.css' rel="stylesheet" type="text/css" />
+	<link href='addon.css' rel="stylesheet" type="text/css" />
+
+	<link href='user.css' rel="stylesheet" type="text/css" />
+
+	<!--[if IE]><link rel="stylesheet" type="text/css" href='ie.css' /><![endif]-->
+	<!--[if IE 7]><link rel="stylesheet" type="text/css" href='ie7.css' /><![endif]-->
+	<link rel="Shortcut Icon" type="image/x-icon" href="" />
+
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/common.js"></script>
+</head>
+<body>
+
+<div class="header">
+	<div class="wrap">
+		<div class="top-bar">
+			<div class="logo">Streetstyle-shop.ru</div>
+			<div class="actions">
+				<div class="cart"><i class="icon ico-cart"></i><a href="#">Корзина</a></div>
+				<i class="splitter"></i>
+				<div class="login"><i class="icon ico-login"></i><a href="#">Войти на сайт</a></div>
+			</div>
+			<div class="phones"><i class="icon ico-phones"></i><i>тел. / факс:</i> + 7 <i>(495)</i> 123-45-67</div>
+		</div><!--top bar-->
+
+		<div class="nav-container">
+			<div class="tools">
+				<div class="search-bar">
+					<form action="">
+						<fieldset>
+							<i class="icon ico-search"></i>
+							<input class="search-field" type="text" placeholder="Модная рубашка)" tabindex="1" />
+							<input type="submit" value="Найти" />
+						</fieldset>
+					</form>
+					<a class="btn btn-help" href="#"></a>
+				</div>
+			</div>
+
+			<ul class="main-nav">
+				<li><a href="#">Для женщин</a></li>
+				<li class="current"><a href="#">Для мужчин</a>
+					<ul class="sub-nav">
+						<li><a href="#">Верхняя одежда</a></li>
+						<li><a href="#">Платья</a></li>
+						<li><a href="#">Головные уборы</a></li>
+						<li><a href="#">Юбки</a></li>
+						<li><a href="#">Брюки</a></li>
+					</ul>
+				</li>
+				<li><a href="#">Для животных</a>
+					<ul class="sub-nav">
+						<li><a href="#">Аксессуары</a></li>
+						<li><a href="#">Домики</a></li>
+						<li><a href="#">Кормушки</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<div class="main">
+	<div class="content wrap">
+
+		<div class="breadcrumbs">
+			<ul class="breadcrumbs-nav">
+				<li><a href="#">Главная</a></li>
+				<li><a href="#">Одежда</a></li>
+				<li><a href="#">Осень</a></li>
+				<li><span class="current">Куртки</span></li>
+			</ul>
+		</div>
+
+		<div class="main-column-right">
+			<h1>Корзина</h1>
+
+			<form action="" class="clearfix cart-form">
+
+				<table class="user-grid cart-grid">
+					<colgroup>
+						<col width="90" />
+						<col />
+						<col width="70" />
+						<col width="70" />
+						<col width="60" />
+						<col width="110" />
+					</colgroup>
+					<tr class="user-grid-heading">
+						<td colspan="2">Товары</td>
+						<td>Размер</td>
+						<td>Цвет</td>
+						<td>Количество</td>
+						<td>Стоимость</td>
+					</tr>
+					<tr>
+						<td><div class="figure-preview"><img src="/tpl/img/i_cart_preview.jpg" width="67" height="106" alt=""/></div></td>
+						<td>
+							<h2 class="order-item-subtitle">Куртка осенняя и очень теплая</h2>
+							<div class="order-item-description">
+								<p>Модель прямого кроя с укороченными рукавами застегивается на необычные кнопки. Оригинальные декоративные элементы и яркий цвет делают куртку нарядной и изысканной.</p>
+							</div>
+						</td>
+						<td>
+							<ul class="item-param-list">
+								<li class="psize-item"><input type="radio" id="param-1-size-1" name="param-1-size"/><label for="param-1-size-1">M</label></li>
+								<li><input type="radio" id="param-1-size-2" name="param-1-size"/><label for="param-1-size-2">L</label></li>
+								<li><input type="radio" id="param-1-size-3" name="param-1-size"/><label for="param-1-size-3">XL</label></li>
+							</ul>
+						</td>
+						<td>
+							<ul class="item-param-list">
+								<li><input type="radio" id="param-1-color-1" name="param-2-color"/><label for="param-1-color-1"><img src="img/opt_colour_3.png" alt=""/></label></li>
+								<li><input type="radio" id="param-1-color-2" name="param-2-color"/><label for="param-1-color-2"><img src="img/opt_colour_4.png" alt=""/></label></li>
+								<li><input type="radio" id="param-1-color-3" name="param-2-color"/><label for="param-1-color-3"><img src="img/opt_colour_5.png" alt=""/></label></li>
+							</ul>
+						</td>
+						<td>
+							<input class="items-qtty" type="text" value="2"/>
+						</td>
+						<td class="txt-right price">3567 руб.
+							<button class="btn-blue btn-remove-fcart">Убрать из корзины</button>
+						</td>
+					</tr>
+					<tr>
+						<td><div class="figure-preview"><img src="/tpl/img/i_cart_preview.jpg" width="67" height="106" alt=""/></div></td>
+						<td>
+							<h2 class="order-item-subtitle">Куртка осенняя и очень теплая</h2>
+							<div class="order-item-description">
+								<p>Модель прямого кроя с укороченными рукавами застегивается на необычные кнопки. Оригинальные декоративные элементы и яркий цвет делают куртку нарядной и изысканной.</p>
+							</div>
+						</td>
+						<td>
+							<ul class="item-param-list">
+								<li class="psize-item"><input type="radio" id="param-2-size-1" name="param-1-size"/><label for="param-2-size-1">M</label></li>
+								<li><input type="radio" id="param-2-size-2" name="param-1-size"/><label for="param-2-size-2">M</label></li>
+								<li><input type="radio" id="param-2-size-3" name="param-1-size"/><label for="param-2-size-3">M</label></li>
+							</ul>
+						</td>
+						<td>
+							<ul class="item-param-list">
+								<li><input type="radio" id="param-2-color-1" name="param-2-color"/><label for="param-2-color-1"><img src="img/opt_colour_3.png" alt=""/></label></li>
+								<li><input type="radio" id="param-2-color-2" name="param-2-color"/><label for="param-2-color-2"><img src="img/opt_colour_4.png" alt=""/></label></li>
+								<li><input type="radio" id="param-2-color-3" name="param-2-color"/><label for="param-2-color-3"><img src="img/opt_colour_5.png" alt=""/></label></li>
+							</ul>
+						</td>
+						<td>
+							<input type="text" value="2"/>
+						</td>
+						<td class="txt-right price">3567 руб.
+							<button class="btn-blue btn-remove-fcart">Убрать из корзины</button>
+						</td>
+					</tr>
+					<tr class="info-row">
+						<td colspan="2">
+							<div class="info-row-border">
+								Купон на скидку: <input type="text" value="5256548"/><button class="btn-grey btn-short">Да</button>
+								<a class="cancel-coupon lnk-dashed" href="#">Отменить действие купона</a>
+							</div>
+						</td>
+						<td colspan="3">
+							<div class="info-row-border txt-right">Все товары со скидкой 200 руб.:</div>
+						</td>
+							<td class="txt-right price txt-right">
+								<div class="info-row-border">13565 руб.</div>
+						</td>
+					</tr>
+				</table>
+
+				<div>
+					<h2 class="section-heading">Место доставки: <span class="location">Бобруйск, Белоруссия</span> <a class="lnk-dashed change-location" href="#">Изменить<i class="ico ico-expand"></i></a></h2>
+				</div>
+
+				<div class="change-location-options">
+					<div class="location-country">
+						<label for="country">Выберите страну:</label>
+						<select name="" id="country" size="7" tabindex="7">
+							<option value="a">Австралия</option>
+							<option value="a">Австрия</option>
+							<option value="a">Азербайджан</option>
+							<option value="a">Азорские острова</option>
+							<option value="a">Аландские острова</option>
+							<option value="a">Албания</option>
+							<option value="a">Алжир</option>
+
+							<option value="a">Австралия</option>
+							<option value="a">Австрия</option>
+							<option value="a">Азербайджан</option>
+							<option value="a">Азорские острова</option>
+							<option value="a">Аландские острова</option>
+						</select>
+					</div>
+
+					<div class="location-city">
+						<label for="city">Выберите населенный пункт:</label>
+						<select name="" id="city" size="7" tabindex="8">
+							<option value="a">Австралия</option>
+							<option value="a">Австрия</option>
+							<option value="a">Азербайджан</option>
+							<option value="a">Азорские острова</option>
+							<option value="a">Аландские острова</option>
+							<option value="a">Албания</option>
+							<option value="a">Алжир</option>
+
+							<option value="a">Австралия</option>
+							<option value="a">Австрия</option>
+							<option value="a">Азербайджан</option>
+							<option value="a">Азорские острова</option>
+							<option value="a">Аландские острова</option>
+						</select>
+					</div>
+
+					<button class="btn-grey">Сохранить изменения</button>
+				</div>
+
+				<div class="section-params">
+					<table class="user-grid">
+						<colgroup>
+							<col width="90" />
+							<col />
+						</colgroup>
+						<tr class="user-grid-heading">
+							<td colspan="2">Способ оплаты</td>
+						</tr>
+						<tr>
+							<td><div class="param-figure"><img src="/tpl/img/i_payment_1.jpg" alt=""/></div></td>
+							<td>
+								<div class="param-description">
+									<input type="radio" checked id="payment1" name="payment"/>
+									<label for="payment1">
+										<span class="param-title">Наложеный платеж</span>
+										<span class="param-info">Впрочем, несмотря на относительную компактность, возможности задания степени сжатия, полвыды</span>
+									</label>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td><div class="param-figure"><img src="/tpl/img/i_payment_2.jpg" alt=""/></div></td>
+							<td>
+								<div class="param-description">
+									<input type="radio" id="payment2" name="payment"/>
+									<label for="payment2">
+										<span class="param-title">Наложеный платеж</span>
+										<span class="param-info">Впрочем, несмотря на относительную компактность, возможности задания степени сжатия, полвыды</span>
+									</label>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td><div class="param-figure"><img src="/tpl/img/i_payment_3.jpg" alt=""/></div></td>
+							<td>
+								<div class="param-description">
+									<input type="radio" id="payment3" name="payment"/>
+									<label for="payment3">
+										<span class="param-title">Наложеный платеж</span>
+										<span class="param-info">Впрочем, несмотря на относительную компактность, возможности задания степени сжатия, полвыды</span>
+									</label>
+								</div>
+							</td>
+						</tr>
+					</table>
+				</div>
+
+				<div class="section-params section-params-right">
+					<table class="user-grid">
+						<colgroup>
+							<col width="90" />
+							<col />
+							<col width="95" />
+						</colgroup>
+						<tr class="user-grid-heading">
+							<td colspan="2">Способ доставки</td>
+							<td>Стоимость</td>
+						</tr>
+						<tr>
+							<td><div class="param-figure"><img src="/tpl/img/i_delivery_1.jpg" alt=""/></div></td>
+							<td>
+								<div class="param-description">
+									<input type="radio" checked id="delivery1" name="delivery"/>
+									<label for="delivery1">
+										<span class="param-title">Почта России</span>
+										<span class="param-info">Срок: 7-12 календарных дней</span>
+									</label>
+								</div>
+							</td>
+							<td class="txt-right price">300 руб.</td>
+						</tr>
+						<tr>
+							<td><div class="param-figure"><img src="/tpl/img/i_delivery_2.jpg" alt=""/></div></td>
+							<td>
+								<div class="param-description">
+									<input type="radio" id="delivery2" name="delivery"/>
+									<label for="delivery2">
+										<span class="param-title">ENS Russian KDK</span>
+										<span class="param-info">Срок: 7-12 календарных дней</span>
+									</label>
+								</div>
+							</td>
+							<td class="txt-right price">300 руб.</td>
+						</tr>
+						<tr>
+							<td><div class="param-figure"><img src="/tpl/img/i_delivery_3.jpg" alt=""/></div></td>
+							<td>
+								<div class="param-description">
+									<input type="radio" id="delivery3" name="delivery"/>
+									<label for="delivery3">
+										<span class="param-title">Экспресс Курьер</span>
+										<span class="param-info">Срок: 7-12 календарных дней</span>
+									</label>
+								</div>
+							</td>
+							<td class="txt-right price">300 руб.</td>
+						</tr>
+					</table>
+				</div>
+
+				<div class="info-row info-row-total txt-right clearfix">
+					<div class="info-row-border txt-right">Общий итог: <span class="em-green">23300<span class="quote-mark">*</span> руб.</span></div>
+				</div>
+
+				<div class="quote-info">
+					<p><span class="quote-mark">*</span> Впрочем, несмотря на относительную компактность, возможности задания свозможности задания.</p>
+				</div>
+
+				<div class="fl-left">
+					<button class="btn-orange btn-big btn-grad">Оформить заказ</button>
+				</div>
+
+			</form><!--//order form-->
+
+
+		</div><!--main column left-->
+
+		<div class="sidebar">
+			<h2 class="clearfix"><span class="h-underline">Верхняя одежда</span>:</h2>
+			<ul class="cat">
+				<li><a href="#">Аксессуары</a></li>
+				<li><a href="#">Бестселлеры</a></li>
+				<li><a href="#">Пиджаки</a></li>
+				<li class="current">
+					<a>Зимняя одежда</a>
+					<ul class="sub-cat">
+						<li><a href="#">Одежда на синтипоне</a></li>
+						<li><a href="#">Плащи</a></li>
+						<li class="current"><a>Куртки теплые</a></li>
+						<li><a href="#">Анараки</a></li>
+					</ul>
+				</li>
+				<li><a href="#">Верхняя одежда</a></li>
+				<li><a href="#">Платья</a></li>
+			</ul>
+
+			<h2 class="clearfix"><span class="h-underline">Бренды</span>:</h2>
+			<ul class="cat">
+				<li><a href="#">Angel Beslow</a></li>
+				<li><a href="#">Deify</a></li>
+				<li><a href="#">Kuckuk</a></li>
+				<li><a href="#">Sodisally</a></li>
+				<li><a href="#">BigRope</a></li>
+			</ul>
+
+			<h2 class="clearfix"><span class="h-underline">Акция недели</span>:</h2>
+
+			<div class="catalog">
+				<span class="item addon-offer">
+					<span class="item-head"><span class="item-pic"><a href="lnk"><img src="img/catalog_img1.jpg" height="237" alt="товар" /></a><span class="item-size">На модели 38 размер</span></span><i class="addon-ico"></i><a class="item-title" href="#">Название товара</a></span>
+					<span class="item-foot sh-corner"><span class="item-price"><del>5600</del> 2499 руб.</span><span class="comments-text"><i class="comments-ico">*</i> <a href="#">отзывы [ 22 ]</a></span></span>
+				</span>
+			</div>
+		</div>
+
+	</div><!--wrap-->
+</div><!--main-->
+
+<div class="footer">
+	<div class="wrap">
+		<div class="left-column">
+			<p class="f-notice clearfix">
+				<a href="http://street-style.ru">Street-style.ru</a> был основана в 2011 году с целью стать лучшим интернет-магазином.<br/> С тех пор мы стали больше, чем просто интернет-магазин обуви. <br/> Наша непоколебимая сосредоточиться на высшее качество обслуживания клиентов позволили нам расширить нашу онлайн предложения включить сумки, одежду<br/> и многое другое!
+			</p>
+
+			<p>
+				<a href="#">Доставка</a> &nbsp;&nbsp; | &nbsp;&nbsp; <a href="#">Возврат</a> &nbsp;&nbsp; <a class="f-cloudy" href="#">Партнерская программа</a>
+			</p>
+		</div>
+
+		<div class="right-column">
+			<p class="copyright">Copyright &copy; 2011 Street-style.ru. Все права защищены</p>
+			<p class="policy">Копирования всех состовляющих частей сайта в какой бы то ни было форме без разрешения владельца авторских прав запрещено.</p>
+
+			<div class="social-container">
+				<a class="icon icon-social ico-twitter" href="#" title="Twitter"></a>
+				<a class="icon icon-social ico-rss" href="#" title="RSS"></a>
+				<a class="icon icon-social ico-fb" href="#" title="Facebook"></a>
+				<a class="icon icon-social ico-vk" href="#" title="VKontakte"></a>
+				<a class="icon icon-social ico-myspace" href="#" title="MySpace"></a>
+			</div>
+		</div>
+	</div></div>
+<!--//layout-->
+</body>
+</html>
