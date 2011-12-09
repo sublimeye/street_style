@@ -217,23 +217,30 @@ ul.item-param-list li { background: none }
 --------------------------------*/
 .cart-form .item-param-list .psize-item {
 	width: 55px;
-	padding: 5px 0;
+	padding: 3px 0;
+	height: 18px;
 }
 
 .cart-form .item-param-list .psize-item input {
 	margin-right: -100%;
 	float: left;
-	opacity: 0;
+	/*opacity: 0;*/
 }
 .cart-form .item-param-list .psize-item label {
 	display: block;
-	padding-left: 30px;
-	outline: 1px solid grey;
+	padding-left: 35px;
+	/*outline: 1px solid grey;*/
+	cursor: pointer;
 }
 
 
 /* cursom radio
 --------------------------------*/
+/* checked state */
+.psize-item:not(#foo) > input[type=radio]:checked + label {
+	outline: 10px solid lime;
+}
+
 /* hover */
 .psize-item:not(#foo) > input[type=radio]:hover + label,
 .psize-item:not(#foo) > input[type=radio]:focus + label,
@@ -248,6 +255,7 @@ ul.item-param-list li { background: none }
 	background-position: 0 -261px;
 	outline: 2px solid blue;
 }
+
 /* disabled hover / active */
 .psize-item:not(#foo) > input[type=radio]:disabled + label,
 .psize-item:not(#foo) > input[type=radio]:hover:disabled + label,
@@ -270,7 +278,7 @@ ul.item-param-list li { background: none }
 .psize-item:not(#foo) > input[type=radio]:active + label,
 .psize-item:not(#foo) > input[type=radio] + label:hover:active {
 	background-position: 0 -201px;
-	outline: 2px solid black;
+	outline: 20px solid black;
 }
 /* active:hover */
 .psize-item:not(#foo) > input[type=radio]:active:checked + label,
