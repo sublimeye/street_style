@@ -161,7 +161,7 @@ ul.item-param-list li { background: none }
 
 /*
 --------------------------------*/
-.btn-remove-fcart { color: #fff; font-size: 13px; line-height: 1; margin-top: 10px; padding: 2px 0 6px 0 }
+.btn-remove-fcart { color: #fff; font-size: 13px; line-height: 1; margin-top: 10px; padding: 2px 10px 6px }
 
 
 /* params sections
@@ -192,4 +192,88 @@ ul.item-param-list li { background: none }
 	background: #F6F6F6;
 }
 
-.cart-form input[type=radio]
+/* pseudo-custom select
+--------------------------------*/
+.cart-form .tiny-select {
+	width: 60px;
+	height: 20px;
+	padding: 0;
+	vertical-align: top;
+	color: #666;
+	border: 1px solid #CCCCCC;
+	border-radius: 3px;
+	box-shadow: 1px 1px 1px #cacaca inset;
+	background: #ffffff;
+	background: -moz-linear-gradient(top, #ffffff 50%, #ededed 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(50%,#ffffff), color-stop(100%,#ededed));
+	background: -webkit-linear-gradient(top, #ffffff 50%,#ededed 100%);
+	background: -o-linear-gradient(top, #ffffff 50%,#ededed 100%);
+	background: -ms-linear-gradient(top, #ffffff 50%,#ededed 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ededed',GradientType=0 );
+	background: linear-gradient(top, #ffffff 50%,#ededed 100%);
+}
+
+/* pseudo labels
+--------------------------------*/
+.cart-form .item-param-list .psize-item {
+	width: 55px;
+	padding: 5px 0;
+}
+
+.cart-form .item-param-list .psize-item input {
+	margin-right: -100%;
+	float: left;
+	opacity: 0;
+}
+.cart-form .item-param-list .psize-item label {
+	display: block;
+	padding-left: 30px;
+	outline: 1px solid grey;
+}
+
+/* cursom radio
+--------------------------------*/
+/* hover */
+.psize-item:not(#foo) > input[type=radio]:hover + label,
+.psize-item:not(#foo) > input[type=radio]:focus + label,
+.psize-item:not(#foo) > input[type=radio] + label:hover {
+	background-position: 0 -181px;
+	outline: 2px solid yellow;
+}
+/* checked / hover */
+.psize-item:not(#foo) > input[type=radio]:hover:checked + label,
+.psize-item:not(#foo) > input[type=radio]:focus:checked + label,
+.psize-item:not(#foo) > input[type=radio]:checked + label:hover {
+	background-position: 0 -261px;
+	outline: 2px solid blue;
+}
+/* disabled hover / active */
+.psize-item:not(#foo) > input[type=radio]:disabled + label,
+.psize-item:not(#foo) > input[type=radio]:hover:disabled + label,
+.psize-item:not(#foo) > input[type=radio]:focus:disabled + label,
+.psize-item:not(#foo) > input[type=radio]:disabled + label:hover,
+.psize-item:not(#foo) > input[type=radio]:disabled + label:hover:active {
+	background-position: 0 -221px;
+	outline: 2px solid red;
+}
+/* disabled hover / active */
+.psize-item:not(#foo) > input[type=radio]:disabled:checked + label,
+.psize-item:not(#foo) > input[type=radio]:hover:disabled:checked + label,
+.psize-item:not(#foo) > input[type=radio]:focus:disabled:checked + label,
+.psize-item:not(#foo) > input[type=radio]:disabled:checked + label:hover,
+.psize-item:not(#foo) > input[type=radio]:disabled:checked + label:hover:active {
+	background-position: 0 -301px;
+	outline: 2px solid green;
+}
+/* active */
+.psize-item:not(#foo) > input[type=radio]:active + label,
+.psize-item:not(#foo) > input[type=radio] + label:hover:active {
+	background-position: 0 -201px;
+	outline: 2px solid black;
+}
+/* active:hover */
+.psize-item:not(#foo) > input[type=radio]:active:checked + label,
+.psize-item:not(#foo) > input[type=radio]:checked + label:hover:active {
+	background-position: 0 -281px;
+	outline: 2px solid #8f1918;
+}
