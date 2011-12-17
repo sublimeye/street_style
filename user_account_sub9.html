@@ -84,7 +84,7 @@
 		<div class="main-column-right">
 			<h1>Личный кабинет: данные покупателя</h1>
 
-			<form action="" class="user-details-form">
+			<form action="#update" method="post" class="user-details-form">
 				<table class="user-details-grid">
 					<colgroup>
 						<col width="16.66%" />
@@ -97,26 +97,26 @@
 					<tr>
 						<td colspan="2">
 							<label for="sname">Фамилия</label>
-							<input id="sname" type="text" tabindex="2"/>
+							<input id="sname" name="sname" type="text" tabindex="2"/>
 						</td>
 						<td colspan="2">
 							<label for="fname">Имя</label>
-							<input id="fname" type="text" tabindex="3"/>
+							<input id="fname" name="fname" type="text" tabindex="3"/>
 						</td>
 						<td colspan="2">
 							<label for="tname">Отчество</label>
-							<input id="tname" type="text" tabindex="4"/>
+							<input id="tname" name="tname" type="text" tabindex="4"/>
 						</td>
 					</tr>
 					<tr>
 						<td colspan="2">
 							<label for="phone1">Телефон:</label>
-							<input id="phone1" type="text" tabindex="5"/>
+							<input id="phone1" name="phone1" type="text" tabindex="5"/>
 						</td>
 						<td colspan="2">
 							<div class="relative">
 								<label for="phone2">&nbsp;</label>
-								<div><input id="phone2" type="text" tabindex="6"/><a class="btn-pseudo btn-pseudo-plus" href="#">+</a></div>
+								<div><input id="phone2" name="phone2" type="text" tabindex="6"/><a class="btn-pseudo btn-pseudo-plus" href="#">+</a></div>
 							</div>
 						</td>
 						<td colspan="2"></td>
@@ -124,7 +124,7 @@
 					<tr>
 						<td colspan="3">
 							<label for="country">Страна</label>
-							<select name="" id="country" size="7" tabindex="7">
+							<select name="country-select" id="country" size="7" tabindex="7">
 								<option value="a">Австралия</option>
 								<option value="a">Австрия</option>
 								<option value="a">Азербайджан</option>
@@ -142,7 +142,7 @@
 						</td>
 						<td colspan="3">
 							<label for="city">Город</label>
-							<select name="" id="city" size="7" tabindex="8">
+							<select name="city-select" id="city" size="7" tabindex="8">
 								<option value="a">Австралия</option>
 								<option value="a">Австрия</option>
 								<option value="a">Азербайджан</option>
@@ -162,43 +162,43 @@
 					<tr>
 						<td>
 							<label for="postcode">Индекс</label>
-							<input id="postcode" type="text" tabindex="9"/>
+							<input id="postcode" name="postcode" type="text" tabindex="9"/>
 						</td>
 						<td colspan="2">
 							<label for="street">Улица</label>
-							<input id="street" type="text" tabindex="10"/>
+							<input id="street" name="street" type="text" tabindex="10"/>
 						</td>
 						<td>
 							<label for="house">Дом</label>
-							<input id="house" type="text" tabindex="11"/>
+							<input id="house" name="house" type="text" tabindex="11"/>
 						</td>
 						<td>
 							<label for="hgroup">Корпус</label>
-							<input id="hgroup" type="text" tabindex="12"/>
+							<input id="hgroup" name="hgroup" type="text" tabindex="12"/>
 						</td>
 						<td>
 							<label for="appartment">Квартира</label>
-							<input id="appartment" type="text" tabindex="13"/>
+							<input id="appartment" name="appartment" type="text" tabindex="13"/>
 						</td>
 					</tr>
 					<tr>
 						<td colspan="3">
 							<label for="email">Электронная почта:</label>
-							<input id="email" type="text"  tabindex="14"/>
+							<input id="email" name="email" type="text"  tabindex="14"/>
 						</td>
 					</tr>
 					<tr>
 						<td colspan="2">
-							<a class="change-password lnk-dashed" href="#">Изменить</a><label for="password">Пароль</label>
-							<input id="password" type="password" tabindex="15" />
+							<a class="change-password lnk-dashed js-pass-toggle" href="#">Изменить</a><label for="password">Пароль</label>
+							<input id="password" name="password" type="password" tabindex="15" />
 						</td>
-						<td colspan="2">
+						<td colspan="2" class="js-change-pass">
 							<label for="password_new">Новый пароль</label>
-							<input id="password_new" type="password" tabindex="16"/>
+							<input id="password_new" name="new_password" type="password" tabindex="16"/>
 						</td>
-						<td colspan="2">
+						<td colspan="2" class="js-change-pass">
 							<label for="password_confirm">Подтверждение</label>
-							<input id="password_confirm" type="password" tabindex="17"/>
+							<input id="password_confirm" name="confirm_password" type="password" tabindex="17"/>
 						</td>
 					</tr>
 				</table>

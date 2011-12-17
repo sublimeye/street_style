@@ -25,7 +25,9 @@
 		<div class="top-bar">
 			<div class="logo">Streetstyle-shop.ru</div>
 			<div class="actions">
-				<div class="cart"><i class="icon ico-cart"></i><a href="#">Корзина</a></div>
+				<div class="cart cart-nonempty">
+					<i class="icon ico-cart"></i><a href="#">Корзина</a> 7 товаров на 35 450 руб.
+				</div>
 				<i class="splitter"></i>
 				<div class="login"><i class="icon ico-login"></i><a href="#">Войти на сайт</a></div>
 			</div>
@@ -85,9 +87,9 @@
 			<h1>Личный кабинет: заказы</h1>
 
 			<!-- USER ORDER -->
-			<div class="user-order-container j-expanded">
+			<div class="user-order-container">
 				<div class="user-order-heading">
-					<a class="toggler lnk-dashed" href="#">Свернуть</a>
+					<a class="toggler lnk-dashed" href="#"><span class="unfold">Развернуть</span><span class="fold">Свернуть</span></a>
 					<span class="order-date">21 ноября 2011 года</span>
 					<span class="order-summary">
 						<span class="em-orange">3 товара</span> на общую сумму <span class="em-orange">7 000 рублей (с доставкой)</span>
@@ -100,7 +102,7 @@
 						<li class="status-grey">Заказ будет отправлен<br/>28 ноября 2011 года (ориентировочно)</li>
 					</ul>
 
-					<table class="user-grid">
+					<table class="user-grid user-grid--indent">
 						<colgroup>
 							<col />
 							<col width="80" />
@@ -143,7 +145,7 @@
 							<td class="txt-right price" colspan="4">300 руб.</td>
 						</tr>
 
-						<tr class="info-row txt-right">
+						<tr class="info-row info-row-total txt-right">
 							<td colspan="5">
 								<div class="info-row-border txt-right">Общий итог: <span class="em-green">23300 руб.</span></div>
 							</td>
@@ -151,7 +153,7 @@
 					</table>
 
 					<div class="btn-container order-actions">
-						<button class="btn-grey">Редактировать заказ</button>
+						<button class="btn-grey ">Редактировать заказ</button>
 						<button class="btn-grey">Отменить заказ</button>
 					</div>
 
@@ -159,9 +161,9 @@
 			</div><!--//order-container-->
 
 <!-- USER ORDER  -->
-			<div class="user-order-container j-expanded">
+			<div class="user-order-container">
 				<div class="user-order-heading">
-					<a class="toggler lnk-dashed" href="#">Свернуть</a>
+					<a class="toggler lnk-dashed" href="#"><span class="unfold">Развернуть</span><span class="fold">Свернуть</span></a>
 					<span class="order-date">21 ноября 2011 года</span>
 					<span class="order-summary">
 						<span class="em-orange">3 товара</span> на общую сумму <span class="em-orange">7 000 рублей (с доставкой)</span>
@@ -178,7 +180,7 @@
 						Номер отправления: 5268965985. <a class="external" target="_blank" href="#">Следите за ходом доставки</a>
 					</div>
 
-					<table class="user-grid">
+					<table class="user-grid user-grid--indent">
 						<colgroup>
 							<col />
 							<col width="80" />
@@ -239,7 +241,7 @@
 
 			<div class="user-order-container j-folded">
 				<div class="user-order-heading">
-					<a class="toggler lnk-dashed" href="#">Развернуть</a>
+					<a class="toggler lnk-dashed" href="#"><span class="unfold">Развернуть</span><span class="fold">Свернуть</span></a>
 					<span class="order-date">21 ноября 2011 года</span>
 					<span class="order-summary">
 						<span class="em-orange">3 товара</span> на общую сумму <span class="em-orange">7 000 рублей (с доставкой)</span>
@@ -256,7 +258,7 @@
 						Номер отправления: 5268965985. <a class="external" target="_blank" href="#">Следите за ходом доставки</a>
 					</div>
 
-					<table class="user-grid">
+					<table class="user-grid user-grid--indent">
 						<colgroup>
 							<col />
 							<col width="80" />
@@ -299,7 +301,7 @@
 							<td class="txt-right price" colspan="4">300 руб.</td>
 						</tr>
 
-						<tr class="info-row txt-right">
+						<tr class="info-row info-row-total txt-right">
 							<td colspan="5">
 								<div class="info-row-border txt-right">Общий итог: <span class="em-green">23300 руб.</span></div>
 							</td>

@@ -450,6 +450,76 @@ function productImageZoom() {
 		toggleZoom(this);
 		return false
 	});
+};
+
+function simpleExpandContract(selector) {
+	var toggleAttr = 'data-toggle';
+
+	$.each($(selector), function(key, element) {
+		var toggleSection = $(element).attr(toggleAttr);
+		$('.' + toggleSection).hide();
+	});
+
+	$(selector).bind('click.toggler', function(e) {
+		var $this = $(this),
+				name = $this.attr(toggleAttr);
+
+		$('.' + name).stop(false, true).slideToggle('fast');
+
+
+		$this.find('.ico').toggleClass('ico-contracted');
+
+		return false
+	});
+};
+
+function userAccountOrders() {
+	var $container = $('.user-order-container');
+
+	$.each($container, function(key, elem) {
+		var $elem = $(elem),
+				initStatus = $elem.hasClass('j-folded');
+
+		$elem.find('.toggler').bind('click', function(e) {
+
+			$elem.toggleClass('j-folded', !initStatus);
+			initStatus = !initStatus;
+			console.log($elem);
+
+			return false
+		});
+	});
+
+}
+
+function changePassToggle() {
+	var toggler = $('.js-pass-toggle'),
+			fieldsContainer = $('.js-change-pass');
+
+	if (fieldsContainer.length) {
+		fieldsContainer.hide();
+	}
+
+	toggler.bind('click', function() {
+		fieldsContainer.toggle();
+		fieldsContainer.find('input').val('');
+		return false
+	});
+}
+
+function addonPhoneField() {
+	var addBtn = $('.btn-pseudo-plus'),
+			addonField = $('.addon-field');
+
+	$.each(addBtn, function(idx, elem) {
+		$(elem).bind('click', function() {
+			/* remove current plus button */
+			addBtn.eq(idx).hide();
+			/* show next addon-field container  */
+			addonField.eq(idx).removeClass('addon-field');
+			return false
+		});
+	});
 }
 
 $(document).ready(function(){
@@ -463,6 +533,16 @@ $(document).ready(function(){
 	clickableHover('.pseudo-select', '.sselect-wrap');
 	clickTrigger('.product-size-list li');
 	triggerSubmitForm('.preview-selected-selectbox', '.filter-preview');
+
+	/* used for advanced location edit */
+	simpleExpandContract('.js-toggle');
+	/* used for order details contract/expand */
+	userAccountOrders();
+	/* used to toggle change password additional fields */
+	changePassToggle();
+
+	/* adds more phones to account details */
+	addonPhoneField();
 
 	$('.select-colours').smartSelectbox({mode: 'colour'});
 	$('.select-size').smartSelectbox({mode: 'size'});
