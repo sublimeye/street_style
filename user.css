@@ -33,6 +33,7 @@ select:focus { outline: 0 }
 .btn-orange { border:1px solid #E67925; border-width:1px 1px 0; text-shadow: 1px 1px 0px #E26414; background: #f4c291; background: -moz-linear-gradient(top,  #f4c291 0%, #f3bb84 5%, #f0a75b 49%, #ee983c 49%, #f2ad5a 100%); background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f4c291), color-stop(5%,#f3bb84), color-stop(49%,#f0a75b), color-stop(49%,#ee983c), color-stop(100%,#f2ad5a)); background: -webkit-linear-gradient(top,  #f4c291 0%,#f3bb84 5%,#f0a75b 49%,#ee983c 49%,#f2ad5a 100%); background: -o-linear-gradient(top,  #f4c291 0%,#f3bb84 5%,#f0a75b 49%,#ee983c 49%,#f2ad5a 100%); background: -ms-linear-gradient(top,  #f4c291 0%,#f3bb84 5%,#f0a75b 49%,#ee983c 49%,#f2ad5a 100%); background: linear-gradient(top,  #f4c291 0%,#f3bb84 5%,#f0a75b 49%,#ee983c 49%,#f2ad5a 100%); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f4c291', endColorstr='#f2ad5a',GradientType=0 ); }
 .btn-orange:hover { box-shadow: 2px 2px 10px #FAE0C6 inset; }
 .btn-orange:active { box-shadow: 2px 2px 2px #D3812E inset; }
+.btn-med {padding: 7px 6px; font-size: 14px;}
 .btn-big {padding: 6px 20px; font-size: 18px;}
 
 /* button plus/add phne
@@ -170,6 +171,7 @@ select:focus { outline: 0 }
 /* CART styles
 --------------------------------*/
 .cart-grid td { vertical-align: top; }
+.cart-grid .user-grid-heading td { vertical-align: middle; }
 .cart-grid input[type=text] { width: 50px; padding: 0 3px; }
 .cart-grid .info-row-border input[type=text] { width: 60px; }
 .cart-grid .figure-preview { display: inline-block; border: 1px solid #DADADA; padding: 2px; }
@@ -226,7 +228,7 @@ ul.item-param-list li { background: none }
 
 .cart-form .info-row { width: 100%;}
 .cart-form .info-row-total { font-size: 18px;}
-.cart-form .info-row-border { position: relative; border: 1px solid #fff; border-width: 1px 0; height: 100%; padding: 2px 0 2px 10px; background: #F6F6F6; margin: 15px 0; min-height: 28px;}
+.cart-form .info-row-border { position: relative; border: 1px solid #fff; border-width: 1px 0; height: 100%; padding: 2px 10px 2px 10px; background: #F6F6F6; margin: 15px 0; min-height: 28px;}
 .cart-form .info-row-border:before, .user-grid .info-row-border:after { content: ''; display: block; position: absolute; width: 100%; height: 1px; top: -2px; left: 0; background: #e5e5e5; }
 .cart-form .info-row-border:after { top: auto; bottom: -2px; }
 .cart-form .info-row .em-green { margin-left: 10px;}
@@ -267,7 +269,7 @@ ul.item-param-list li { background: none }
 --------------------------------*/
 /* checked state */
 .psize-item:not(#foo) > input[type=radio] { opacity: 0; }
-.psize-item:not(#foo) > input[type=radio] + label { position: relative; cursor: pointer; cursor: help !important;}
+.psize-item:not(#foo) > input[type=radio] + label { position: relative; cursor: pointer}
 .psize-item:not(#foo) > input[type=radio] + label:before { position: absolute; content: ''; width: 15px; height: 15px; left: 6px; top: 0; background: url("/tpl/img/ui_checkboxes.png"); }
 
 /* checked */
@@ -310,7 +312,191 @@ ul.item-param-list li { background: none }
 .psize-item:not(#foo) > input[type=radio] + label:hover:active {
 	/*background-position: 0 -15px;*/
 }
+
 /* active:hover */
 .psize-item:not(#foo) > input[type=radio]:active:checked + label,
 .psize-item:not(#foo) > input[type=radio]:checked + label:hover:active {
 }
+
+/* cursom cechbox (duplicated radio)
+--------------------------------*/
+/* checked state */
+.user-chbx:not(#foo) > input[type=checkbox] { opacity: 0; }
+.user-chbx:not(#foo) > input[type=checkbox] + label { position: relative; cursor: pointer;}
+.user-chbx:not(#foo) > input[type=checkbox] + label:before { position: absolute; content: ''; width: 15px; height: 15px; left: -20px; top: 3px; background: url("/tpl/img/ui_checkboxes.png"); }
+
+/* checked */
+.user-chbx:not(#foo) > input[type=checkbox]:checked + label:before {
+	background-position: 0 -15px;
+}
+
+/* hover */
+.user-chbx:not(#foo) > input[type=checkbox]:hover + label:before,
+.user-chbx:not(#foo) > input[type=checkbox]:focus + label:before,
+.user-chbx:not(#foo) > input[type=checkbox] + label:hover:before {
+	background-position: -15px 0;
+}
+
+/* checked / hover */
+.user-chbx:not(#foo) > input[type=checkbox]:hover:checked + label:before,
+.user-chbx:not(#foo) > input[type=checkbox]:focus:checked + label:before,
+.user-chbx:not(#foo) > input[type=checkbox]:checked + label:hover:before {
+	background-position: -15px -15px;
+}
+
+
+/* additional cart styles
+--------------------------------*/
+.cart-error-message {
+	background: #FBF1D1;
+	border: 1px solid #EBDBA7;
+
+}
+
+.cart-ok-message {
+	background: #E8FFD4;
+	border: 1px solid #BFD9AC;
+}
+
+.cart-error-message, .cart-ok-message {
+	position: relative;
+	width: 100%;
+	display: table;
+	padding-left: 75px;
+	border-width: 1px 0;
+	margin: 15px 0;
+}
+
+.cart-error-message:before, .cart-ok-message:before {
+	position: absolute;
+	left: 15px;
+	top: 50%;
+	content: '';
+	width: 46px;
+	height: 40px;
+	background: url("/tpl/img/icons.png");
+}
+
+.cart-error-message:before {
+	background-position: -65px -143px;
+	margin-top: -20px;
+}
+
+.cart-ok-message:before {
+	background-position: -65px -183px;
+	margin-top: -19px;
+}
+
+.cart-error-message .message-content, .cart-ok-message .message-content {
+	display: table-cell;
+	vertical-align: middle;
+	padding: 8px 0;
+	height: 45px;
+}
+
+/* make order button
+--------------------------------*/
+.btn-two-lines button {
+	padding: 3px 20px;
+	vertical-align: middle;
+}
+
+.btn-container .line-1, .btn-container .line-2 {
+	display: block;
+	line-height: 1.1em;
+}
+
+.btn-container .line-1 {
+	font-size: 12px;
+	font-weight: normal;
+	text-shadow: 1px 1px 1px #F7CEA6;
+}
+
+.btn-container .line-2 {
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 1.2em;
+}
+
+/* order cancel
+--------------------------------*/
+.cancel-order-container {
+	border-top: 1px solid #CCCCCC;
+	margin-top: 18px;
+	padding-top: 4px;
+}
+
+.cancel-order-container .note {
+	font-style: italic;
+	color: #53575d;
+	margin-bottom: 2px;
+}
+
+.cancel-order-container textarea {
+	display: block;
+	width: 433px;
+	height: 70px;
+	margin-bottom: 9px;
+}
+
+/*
+--------------------------------*/
+.hidden {display: none}
+
+/* remind password
+--------------------------------*/
+.auth-helper {
+	float: right;
+	margin-right: 40px;
+}
+
+.section-row .note {
+	margin: 10px 0 0;
+	line-height: 1.2em;
+}
+
+.password-reminder {
+	width: 248px;
+	float: left;
+	margin: 0 0;
+}
+
+.btn-big-tight {
+	font-size: 18px;
+	line-height: 0.9em;
+	padding: 4px 15px;
+}
+
+.cat-woffset {
+	margin-top: 60px;
+}
+
+/* table user grid fix
+--------------------------------*/
+.inner-grid {
+	padding: 0 !important;
+}
+
+.inner-table-grid {
+	width: 100%;
+}
+
+.inner-table-grid label {
+	white-space: nowrap;
+}
+
+.main-column-right .privacy-agreement label, .main-column-right .privacy-agreement input {
+	display: inline-block;
+	margin: 0;
+	text-indent: 0;
+	width: auto;
+}
+
+.privacy-agreement {
+	margin: 10px 0;
+}
+
+.main-column-right .privacy-agreement input {
+	margin-right: 10px;
+}
+

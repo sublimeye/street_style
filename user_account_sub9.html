@@ -160,25 +160,33 @@
 						</td>
 					</tr>
 					<tr>
-						<td>
-							<label for="postcode">Индекс</label>
-							<input id="postcode" name="postcode" type="text" tabindex="9"/>
-						</td>
-						<td colspan="2">
-							<label for="street">Улица</label>
-							<input id="street" name="street" type="text" tabindex="10"/>
-						</td>
-						<td>
-							<label for="house">Дом</label>
-							<input id="house" name="house" type="text" tabindex="11"/>
-						</td>
-						<td>
-							<label for="hgroup">Корпус</label>
-							<input id="hgroup" name="hgroup" type="text" tabindex="12"/>
-						</td>
-						<td>
-							<label for="appartment">Квартира</label>
-							<input id="appartment" name="appartment" type="text" tabindex="13"/>
+						<td colspan="6" class="inner-grid">
+							<table class="inner-table-grid">
+								<colgroup>
+									<col width="75" />
+									<col />
+									<col width="60" />
+									<col width="60" />
+									<col width="60" />
+								</colgroup>
+								<tr>
+									<td>
+										<label for="postcode">Индекс</label> <input id="postcode" type="text" tabindex="9"/>
+									</td>
+									<td>
+										<label for="street">Улица</label> <input id="street" type="text" tabindex="10"/>
+									</td>
+									<td>
+										<label for="house">Дом</label> <input id="house" type="text" tabindex="11"/>
+									</td>
+									<td>
+										<label for="hgroup">Корпус</label> <input id="hgroup" type="text" tabindex="12"/>
+									</td>
+									<td>
+										<label for="appartment">Кв-ра</label> <input id="appartment" type="text" tabindex="13"/>
+									</td>
+								</tr>
+							</table>
 						</td>
 					</tr>
 					<tr>
@@ -202,6 +210,12 @@
 						</td>
 					</tr>
 				</table>
+
+				<div class="privacy-agreement">
+					<p class="user-chbx"><input id="p-agreement" type="checkbox"/><label for="p-agreement">Я хочу получать новости и скидку!</label>
+					</p>
+				</div>
+
 				<div>
 					<label class="btn-container">
 						<button class="btn-orange btn-grad btn-big" tabindex="18">Сохранить изменения</button>

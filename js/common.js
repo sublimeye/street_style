@@ -269,9 +269,9 @@ function productImagesSlider(thumbs) {
 
 			$('.preview-caption span').html(images[id].caption);// небольшая доработка (обновляет комментарий под фото)
 
-	//			set as current
 			thumbLinks.removeClass('current');
-			$(this).addClass('current');
+	//			set as current
+			$(thumbLinks[+id]).addClass('current');
 		}
 	};
 
@@ -315,7 +315,8 @@ function productImagesSlider(thumbs) {
 		});
 
 		thumbLinks.bind('click.preview_image', function() {
-			var id = $(this).attr('rel'),
+			var $this = $(this),
+					id = $this.attr('rel'),
 					mod = options.zoomed ? 'big' : 'med';
 
 			if (thumbnails.images[id]['loaded_' + mod]) {
@@ -330,6 +331,7 @@ function productImagesSlider(thumbs) {
 					}
 				};
 			}
+//			$this.addClass('current');
 			return false;
 		});
 
@@ -522,6 +524,35 @@ function addonPhoneField() {
 	});
 }
 
+function cancelOrder(selector) {
+	var $el = $('.' + selector);
+
+	/* cancel button && cancel tempalte exist */
+	if ( $el.length ) {
+		/* event for cancel button */
+		$el.bind( 'click.cancel_order' , function (e) {
+			var $target = $(e.target),
+					id = $target.attr('rel'),
+					$cancelContainer = $target.closest('.user-order-content').find('.cancel-order-container');
+
+			console.log($cancelContainer);
+			$cancelContainer.slideToggle();
+			return false
+		} );
+	}
+}
+
+function remindPassword() {
+	var $containers = $('.js-password-container'),
+			$buttons = $containers.find('.js-remind-password');
+
+	$buttons.bind('click.reminder-toggle', function() {
+		$containers.slideToggle();
+		return false
+	});
+
+}
+
 $(document).ready(function(){
 	$('.logo').length && $('.logo').gradientText({colors:["#a894e7","#6fd2d5"]});
 
@@ -543,6 +574,14 @@ $(document).ready(function(){
 
 	/* adds more phones to account details */
 	addonPhoneField();
+
+	/* remind password dropdown */
+	addonPhoneField();
+
+	/*cancel order*/
+	cancelOrder("js-cancel-order");
+
+	remindPassword();
 
 	$('.select-colours').smartSelectbox({mode: 'colour'});
 	$('.select-size').smartSelectbox({mode: 'size'});
