@@ -602,6 +602,11 @@ __________________________________*/
 	margin: 10px 22px 5px;
 }
 
+.catalog .item-notice {
+	display: inline-block;
+	padding: 0 22px;
+}
+
 .catalog .item-foot:before {
 	display: block;
 	content: '';

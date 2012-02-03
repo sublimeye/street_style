@@ -157,6 +157,11 @@ a:hover{color: #be4242; /*text-decoration:none;*/}
 	color: #666;
 }
 
+.catalog .item-notice {
+	color: #439C4C;
+	font-size: 11px;
+}
+
 .item-title:hover {
 	text-decoration: none;
 }
