@@ -324,19 +324,16 @@ ul.item-param-list li { background: none }
 .user-chbx:not(#foo) > input[type=checkbox] { opacity: 0; }
 .user-chbx:not(#foo) > input[type=checkbox] + label { position: relative; cursor: pointer;}
 .user-chbx:not(#foo) > input[type=checkbox] + label:before { position: absolute; content: ''; width: 15px; height: 15px; left: -20px; top: 3px; background: url("/tpl/img/ui_checkboxes.png"); }
-
 /* checked */
 .user-chbx:not(#foo) > input[type=checkbox]:checked + label:before {
 	background-position: 0 -15px;
 }
-
 /* hover */
 .user-chbx:not(#foo) > input[type=checkbox]:hover + label:before,
 .user-chbx:not(#foo) > input[type=checkbox]:focus + label:before,
 .user-chbx:not(#foo) > input[type=checkbox] + label:hover:before {
 	background-position: -15px 0;
 }
-
 /* checked / hover */
 .user-chbx:not(#foo) > input[type=checkbox]:hover:checked + label:before,
 .user-chbx:not(#foo) > input[type=checkbox]:focus:checked + label:before,
@@ -344,6 +341,33 @@ ul.item-param-list li { background: none }
 	background-position: -15px -15px;
 }
 
+/* cursom radio (another class, duplicated radio)
+--------------------------------*/
+/* checked state */
+.user-chbx:not(#foo) > input[type=radio] { opacity: 0; }
+.user-chbx:not(#foo) > input[type=radio] + label { position: relative; cursor: pointer;}
+.user-chbx:not(#foo) > input[type=radio] + label:before { position: absolute; content: ''; width: 15px; height: 15px; left: -20px; top: 3px; background: url("/tpl/img/ui_checkboxes.png"); }
+/* checked */
+.user-chbx:not(#foo) > input[type=radio]:checked + label:before {
+	background-position: 0 -15px;
+}
+/* hover */
+.user-chbx:not(#foo) > input[type=radio]:hover + label:before,
+.user-chbx:not(#foo) > input[type=radio]:focus + label:before,
+.user-chbx:not(#foo) > input[type=radio] + label:hover:before {
+	background-position: -15px 0;
+}
+/* checked / hover */
+.user-chbx:not(#foo) > input[type=radio]:hover:checked + label:before,
+.user-chbx:not(#foo) > input[type=radio]:focus:checked + label:before,
+.user-chbx:not(#foo) > input[type=radio]:checked + label:hover:before {
+	background-position: -15px -15px;
+}
+
+.param-description .user-chbx:not(#foo) > input[type=radio] + label:before {
+	left: -30px;
+	top: 2px;
+}
 
 /* additional cart styles
 --------------------------------*/
