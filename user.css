@@ -524,3 +524,6 @@ ul.item-param-list li { background: none }
 	margin-right: 10px;
 }
 
+.socicons td {
+  vertical-align: top
+}
