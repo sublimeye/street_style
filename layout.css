@@ -561,7 +561,7 @@ __________________________________*/
 
 .catalog .item-head {
 	position: relative;
-	margin-bottom: 55px;
+	margin-bottom: 58px;
 	vertical-align: top;
 	border: 1px solid #D9D9D9;
 	border-bottom-width: 0px;
@@ -603,7 +603,7 @@ __________________________________*/
 }
 
 .catalog .item-notice {
-	display: inline-block;
+	display: block;
 }
 
 .catalog .item-foot:before {
