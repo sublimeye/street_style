@@ -160,6 +160,7 @@ a:hover{color: #be4242; /*text-decoration:none;*/}
 .catalog .item-notice {
 	color: #439C4C;
 	font-size: 11px;
+	line-height: 2em;
 }
 
 .item-title:hover {

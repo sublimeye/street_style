@@ -346,6 +346,19 @@ __________________________________*/
 	margin-bottom:1ex;
 }
 
+.product-data .product-delivery-notice {
+    font-weight: bold;
+    float: right;
+    width: 149px;
+    height: 33px;
+    line-height: 33px;
+    background: url("/tpl/img/icons.png") 0 -284px no-repeat;
+    color: #49632c;
+    text-align: center;
+    text-shadow: 1px 1px 1px #BDD880;
+
+    margin-top: 20px;
+}
 /*	=colours
 __________________________________*/
 

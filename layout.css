@@ -460,7 +460,7 @@ __________________________________*/
 
 .jspArrow {
 	position:relative;
-	top:-1px;
+	top: -2px;
 	background: url('/tpl/img/icons.png') 20px -233px;
 	text-indent:-20000px;
 	display:block;
@@ -561,7 +561,7 @@ __________________________________*/
 
 .catalog .item-head {
 	position: relative;
-	margin-bottom: 45px;
+	margin-bottom: 55px;
 	vertical-align: top;
 	border: 1px solid #D9D9D9;
 	border-bottom-width: 0px;
@@ -575,7 +575,7 @@ __________________________________*/
 
 .catalog .item-foot {
 	width: 128px;
-	height: 42px;
+	height: 60px;
 	margin-left: -174px;
 	padding: 0 22px;
 	color: #aaa;
@@ -604,7 +604,6 @@ __________________________________*/
 
 .catalog .item-notice {
 	display: inline-block;
-	padding: 0 22px;
 }
 
 .catalog .item-foot:before {
