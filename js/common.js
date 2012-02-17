@@ -553,6 +553,46 @@ function remindPassword() {
 
 }
 
+function headerActions() {
+	var $loginBtn = $('.js-login-btn'),
+		$loginBtnContainer = $loginBtn.closest('.js-container'),
+		$remindBtn = $('.js-remind-btn'),
+		$supportBtn = $('.js-support-btn'),
+		$supportBtnContainer = $supportBtn.closest('.js-container');
+
+	$supportBtn.bind('click.show_support_form', function (e) {
+		e.preventDefault();
+		$('.expanded').removeClass('expanded js-login js-remind');
+		$supportBtnContainer.toggleClass('expanded');
+		hidePopup($supportBtnContainer);
+	});
+
+	$loginBtn.bind('click', function (e) {
+		e.preventDefault();
+		$('.expanded').removeClass('expanded js-login js-remind');
+		$loginBtnContainer.toggleClass('expanded js-login');
+		hidePopup($loginBtnContainer);
+	});
+
+	$remindBtn.bind('click', function(e) {
+		e.preventDefault();
+		$('.expanded').removeClass('expanded js-login js-remind');
+		$loginBtnContainer.addClass('expanded js-remind');
+		hidePopup($loginBtnContainer);
+	})
+}
+
+function hidePopup (popup) {
+	$(document).unbind().bind('click.close_popup', function (e) {
+		console.log('click');
+		var $this = $(e.target);
+		if (!$this.closest('.expanded').length) {
+			$('.expanded').removeClass('expanded js-login js-remind');
+			$(document).unbind('click.close_popup');
+		}
+	});
+}
+
 $(document).ready(function(){
 	$('.logo').length && $('.logo').gradientText({colors:["#a894e7","#6fd2d5"]});
 
@@ -582,6 +622,8 @@ $(document).ready(function(){
 	cancelOrder("js-cancel-order");
 
 	remindPassword();
+	/*header actions - auth , login, reminder, support popups */
+	headerActions();
 
 	$('.select-colours').smartSelectbox({mode: 'colour'});
 	$('.select-size').smartSelectbox({mode: 'size'});

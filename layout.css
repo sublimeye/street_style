@@ -885,8 +885,8 @@ __________________________________*/
 	line-height: 1.1;
 }
 
-.expanded.auth-container, .expanded .support-callback-container {
-	z-index: 100;
+.expanded.auth-container, .expanded.support-callback-container {
+	z-index: 999;
 	background: rgb(96,100,104);
 	background: -moz-linear-gradient(top,  rgba(96,100,104,1) 0%, rgba(87,91,97,1) 11%, rgba(56,59,63,1) 100%);
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(96,100,104,1)), color-stop(11%,rgba(87,91,97,1)), color-stop(100%,rgba(56,59,63,1)));
@@ -1009,11 +1009,12 @@ __________________________________*/
     top: 0;
     width: 204px;
     padding-top: 0;
+    height: 82px;
 }
 
 .support-callback-container {
 	position: relative;
-	z-index: 100;
+	z-index: 999;
 	width: 100%;
 	padding-bottom: 20px;
 	top: 0;
@@ -1065,7 +1066,7 @@ __________________________________*/
 
 .ui-link {
 	border-bottom-width: 1px;
-	border-bottom-style: dashed;
+	border-bottom-style: dotted;
 	text-decoration: none;
 	color: #fff;
 }
