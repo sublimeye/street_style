@@ -8,6 +8,7 @@
 	<link href='inner.css' rel="stylesheet" type="text/css" />
 	<link href='typography.css' rel="stylesheet" type="text/css" />
 	<link href='addon.css' rel="stylesheet" type="text/css" />
+	<link href='user.css' rel="stylesheet" type="text/css" />
 
 	<!--[if IE]><link rel="stylesheet" type="text/css" href='ie.css' /><![endif]-->
 	<!--[if IE 7]><link rel="stylesheet" type="text/css" href='ie7.css' /><![endif]-->
@@ -21,13 +22,96 @@
 <div class="header">
 	<div class="wrap">
 		<div class="top-bar">
-			<div class="logo">Streetstyle-shop.ru</div>
-			<div class="actions">
-				<div class="cart"><i class="icon ico-cart"></i><a href="#">Корзина</a></div>
-				<i class="splitter"></i>
-				<div class="login"><i class="icon ico-login"></i><a href="#">Войти на сайт</a></div>
+			<a href="#" class="logo">Streetstyle-shop.ru</a>
+			<address class="contact-info">
+				<span class="contact-info-entry b-icon b-icon-phone">+ 7 983 563-48-03</span>
+				<span class="contact-info-entry b-icon b-icon-mail"><a href="mailto:info@streetstyle-shop.ru">info@streetstyle-shop.ru</a></span>
+			</address>
+
+			<!--корзина не пустая-->
+<!--
+			<div class="cart header-section">
+				<div class="h-row"><span class="cart-link b-icon b-icon-cart"><a href="#">Корзина</a></span><span class="cart-items-count">20 товаров</span></div>
+				<div class="h-row"><span class="cart-message">992 400 руб.</span></div>
 			</div>
-			<div class="phones"><i class="icon ico-phones"></i><i>тел. / факс:</i> + 7 <i>(495)</i> 123-45-67</div>
+-->
+
+			<!--корзина пустая-->
+			<div class="cart cart-empty header-section">
+				<div class="h-row"><span class="cart-link b-icon b-icon-cart"><a href="#">Корзина</a></span><span class="cart-items-count">пока пуста</span></div>
+				<div class="h-row"><span class="cart-message">А может <a href="">комбинезон</a>?</span></div>
+			</div>
+
+			<div class="auth header-section">
+				<div class="auth-container b-icon b-icon-auth expanded js-remind">
+
+					<!--logged in-->
+<!--
+					<div class="h-row">dmitry.roudakov@rambler.mail.ru</div>
+					<div class="h-row"><a class="lnk-divider" href="#login">Мои заказы</a><a href="register">Мои данные</a><a class="b-icon b-icon-logout" href="#logout">Выход</a></div>
+-->
+
+					<!--	logged out-->
+ 					<div class="h-row"><a class="ui-link lnk-divider lnk-login" href="#login">Вход</a><a href="register">Регистрация</a></div>
+					<div class="h-row"><a class="ui-link lnk-remind" href="#remind-password">Напомнить пароль</a></div>
+
+					<div class="auth-login">
+						<form action="">
+							<dl class="field-grid">
+								<dt><label for="auth-email">Электронная почта:</label></dt>
+								<dd><input type="text" id="auth-email"></dd>
+
+								<dt><label for="auth-password">Пароль:</label></dt>
+								<dd><input type="password" id="auth-password"></dd>
+							</dl>
+							<div class="submit-form"><input class="btn-blue btn-grad" type="submit" value="Войти"></div>
+						</form>
+					</div>
+
+					<div class="auth-remind">
+						<form action="">
+							<dl class="field-grid">
+								<dt><label for="auth-remind-email">Электронная почта:</label></dt>
+								<dd><input type="text" id="auth-remind-email"></dd>
+							</dl>
+							<div class="submit-form"><input class="btn-blue btn-grad" type="submit" value="Выслать пароль"></div>
+							<p class="b-info">Пароль придет на указанный адрес электронной почты.</p>
+						</form>
+					</div>
+
+				</div>
+			</div>
+
+			<div class="support-callback header-section">
+				<div class="support-callback-container">
+					<div class="support-callback-action"><a class="ui-link" href="#support-callback">Обратный<br/>звонок</a></div>
+
+					<div class="support-callback-form">
+						<p class="b-info">Менеджер свяжется с вами в удобное время</p>
+
+						<form action="">
+							<dl class="field-grid">
+								<dt><label for="support-name">Ваше имя:</label></dt>
+								<dd><input type="text" id="support-name"></dd>
+
+								<dt><label for="support-phone">Номер телефона:</label></dt>
+								<dd><input type="text" id="support-phone"></dd>
+
+								<dt><label for="support-time">Когда удобно позвоноить:</label></dt>
+								<dd><input type="text" id="support-time"></dd>
+
+								<dt><label for="support-from">Откуда вы:</label></dt>
+								<dd><input type="text" id="support-from"></dd>
+							</dl>
+
+							<p class="user-chbx"><input id="p-agreement" type="checkbox"/><label for="p-agreement">Согласна на обработку персональных данных и так далее.</label></p>
+
+							<div class="submit-form"><input class="btn-blue btn-grad" type="submit" value="Заказать звонок"></div>
+						</form>
+					</div>
+				</div>
+			</div>
+
 		</div><!--top bar-->
 
 		<div class="nav-container">
